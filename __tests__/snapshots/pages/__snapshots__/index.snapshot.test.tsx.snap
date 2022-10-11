@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render homepage matching snapshot 1`] = `
+<main
+  className="sc-gswNZR hqqbAB"
+>
+  <h1
+    className="sc-bcXHqe fxNlrP"
+  >
+     Hello World 
+  </h1>
+</main>
+`;

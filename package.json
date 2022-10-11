@@ -1,0 +1,60 @@
+{
+  "name": "next-ts-simple-template",
+  "version": "0.1.0",
+  "private": true,
+  "resolutions": {
+    "styled-components": "^5"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write \"{src,__tests__}/**/*.{js,jsx,tsx,ts,json,md}\"",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "pre-push": "yarn test:all",
+    "standardize": "yarn lint && yarn format",
+    "test": "jest",
+    "test:e2e:headless": "cypress run --headless",
+    "test:e2e": "cypress open",
+    "test:all": "yarn test:coverage && yarn test:e2e:headless",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "next": "12.1.5",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "@types/node": "17.0.24",
+    "@types/react": "18.0.5",
+    "@types/react-dom": "18.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "babel-jest": "^27.5.1",
+    "cypress": "^9.5.4",
+    "eslint": "^8.13.0",
+    "eslint-config-next": "^12.1.5",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest-dom": "^4.0.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "eslint-plugin-testing-library": "^5.3.1",
+    "husky": "^7.0.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1",
+    "lint-staged": "^12.3.8",
+    "prettier": "^2.6.2",
+    "react-test-renderer": "^18.0.0",
+    "resize-observer-polyfill": "^1.5.1",
+    "typescript": "4.6.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "yarn standardize"
+  }
+}
