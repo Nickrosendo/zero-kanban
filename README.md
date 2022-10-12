@@ -1,25 +1,66 @@
-## Introduction
-
-### Description
+## Description
 
 This project is a Kanban management tool.
 
 It allow the user to create projects boards, and customize them to show what it needs to be done in a project. 
 
-Available operations inside a board are:
+## Summary
+[Design concepts](#design-contacts)
 
-- create/edit/remove columns;
-- create/edit/remove cards inside columns;
-- move cards through columns via Drag&drop;
-- filter cards by their tags/status;
-- search cards by their title;
+[Routes](#routes)
 
-Available customizations are:
+[Tech stack](#tech-stack)
 
-- The user can choose a dark theme and a light theme;
-- The user can choose the font-size of the application;
+[Getting started](#getting-started)
 
-### Tech Stack
+[Running tests](#running-tests)
+
+## Design concepts
+
+### components
+The components are styled using styled-components and sits on the `/src/components` folder, all the components have a dark and light theme version.
+
+### state management
+The state management on this project uses both `redux` and `React Context API`, while the `redux` is used for more "transaction" data of the application, such as the board state, cards, etc. The `React Context API` is used for customizations like the theme, font-size and that kind of user customizations.
+
+### authentication
+The authentication occurs in the server, using the [Next.js api routes](https://nextjs.org/docs/api-routes/introduction), and store the user data only in the server memory, so at every restart the data is reseted.
+The user can also use the application as a guest user to skip authentication.
+
+### board
+The board management occurs mostly on two places, in the `redux` store and also in the `server` memory, and each board update this data gets synced on all clients.
+
+### customization
+The application allow the user to customize their experience, mostly their theme(dark or light) and the font-size of the application. The customization data gets stored in the server memory and synced to all clients.
+
+## Routes
+
+### /board
+
+This route is intended to list the user boards, create a new one or remove the boards in the list.
+
+### /board/[id]
+
+This route contains most of the board functionality, the `id` is a dynamic route flag to identify the current board.
+
+On this route the user can create new columns, delete existent ones and reorganize their order.
+
+On the available columns the user can create new cards, delete existent cards and reorganize their order or move them to other columns.
+
+On the available cards the user can edit them by clicking the edit button or double-click them.
+
+### /login 
+
+The Login route allow the user to login as a `guest` or a `know-user` via username and password combo.
+
+***The authentication data is stored only on the memory of the server, so at every restart or new deploy all `know-users` gets reseted.***
+
+### /signup
+
+The Signup route allow users to register in the platform.
+
+
+## Tech stack
 
 The project uses `Next.js` react framework with `typescript`;
 
@@ -39,11 +80,7 @@ The project uses `Next.js` react framework with `typescript`;
 
 `github-actions` for running tests on pushs to branches `main` and `staging`;
 
-## Project Structure
-
-## Design Concepts
-
-## Getting Started
+## Getting started
 
 First, run the development server:
 
