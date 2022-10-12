@@ -37,7 +37,7 @@ The project uses `Next.js` react framework with `typescript`;
 
 `prettier` for code formatting and enforce a consistent code styling through the project.
 
-`github-actions` for running integration tests on pull-requests;
+`github-actions` for running tests on pushs to branches `main` and `staging`;
 
 ## Project Structure
 
