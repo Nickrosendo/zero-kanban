@@ -6,7 +6,7 @@ This project is a Kanban management tool.
 
 It allow the user to create projects boards, and customize them to show what it needs to be done in a project. 
 
-Available operations inside a board consist of:
+Available operations inside a board are:
 
 - create/edit/remove columns;
 - create/edit/remove cards inside columns;
@@ -14,6 +14,10 @@ Available operations inside a board consist of:
 - filter cards by their tags/status;
 - search cards by their title;
 
+Available customizations are:
+
+- The user can choose a dark theme and a light theme;
+- The user can choose the font-size of the application;
 
 ### Tech Stack
 
@@ -31,7 +35,7 @@ The project uses `Next.js` react framework with `typescript`;
 
 `eslint` for code correctness analyses and standardize the project syntax.
 
-`prettier` for code formatting to enforce a consistent code styling.
+`prettier` for code formatting and enforce a consistent code styling through the project.
 
 `github-actions` for running integration tests on pull-requests;
 
