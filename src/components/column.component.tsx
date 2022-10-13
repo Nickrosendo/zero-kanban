@@ -1,11 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 
+import { ColumnType } from "@root/types";
+import { Card } from "./card.component";
+
 const StyledColumn = styled.div`
   color: ${(props) => props.theme.fg};
   background: ${(props) => props.theme.bg};
 `;
 
-export const Column = () => {
-  return <StyledColumn data-testid="column"> Column </StyledColumn>;
+export interface ColumnProps {
+  column: ColumnType;
+}
+
+export const Column: React.FC<ColumnProps> = ({ column = {} }) => {
+  return (
+    <StyledColumn data-testid="column">
+      <p> {column?.name} </p>
+      {column?.cards?.map((card) => (
+        <Card key={card?.id} card={card} />
+      ))}
+    </StyledColumn>
+  );
 };

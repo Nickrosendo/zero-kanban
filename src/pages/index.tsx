@@ -1,15 +1,13 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
 
+import { BoardsList } from "@root/components";
+import { BoardType } from "@root/types";
+import { defaultBoards } from "@root/data";
+
 export interface HomeProps {
   cookies?: string;
 }
-
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: ${(props) => props.theme.fg};
-`;
 
 const Main = styled.main`
   background: ${(props) => props.theme.bg};
@@ -23,9 +21,11 @@ const Main = styled.main`
 `;
 
 const Home: NextPage<HomeProps> = () => {
+  const myBoards: BoardType[] = defaultBoards;
+
   return (
     <Main>
-      <Title> Hello World </Title>
+      <BoardsList boards={myBoards} />
     </Main>
   );
 };

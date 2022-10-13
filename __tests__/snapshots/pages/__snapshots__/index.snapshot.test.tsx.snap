@@ -2,12 +2,132 @@
 
 exports[`should render homepage matching snapshot 1`] = `
 <main
-  className="sc-gswNZR hqqbAB"
+  className="sc-jrcTuL dIixki"
 >
-  <h1
-    className="sc-bcXHqe fxNlrP"
+  <div
+    className="sc-pyfCe gZfMTi"
+    data-testid="boards-list"
   >
-     Hello World 
-  </h1>
+    <div
+      className="sc-iBYQkv hSkvkJ"
+      data-testid="board"
+    >
+      <h1>
+         
+        My first board
+         
+      </h1>
+      <div
+        className="sc-jSUZER ciNoqe"
+        data-testid="column"
+      >
+        <p>
+           
+          first column
+           
+        </p>
+        <div
+          className="sc-eDvSVe bXsRJg"
+          data-testid="card"
+        >
+          <p>
+             
+            first card
+             
+          </p>
+          <span>
+             
+            first descriptions
+             
+          </span>
+          <span>
+             
+            1
+             
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-iBYQkv hSkvkJ"
+      data-testid="board"
+    >
+      <h1>
+         
+        My second board
+         
+      </h1>
+      <div
+        className="sc-jSUZER ciNoqe"
+        data-testid="column"
+      >
+        <p>
+           
+          second column
+           
+        </p>
+        <div
+          className="sc-eDvSVe bXsRJg"
+          data-testid="card"
+        >
+          <p>
+             
+            second card
+             
+          </p>
+          <span>
+             
+            second descriptions
+             
+          </span>
+          <span>
+             
+            1
+             
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-iBYQkv hSkvkJ"
+      data-testid="board"
+    >
+      <h1>
+         
+        My third board
+         
+      </h1>
+      <div
+        className="sc-jSUZER ciNoqe"
+        data-testid="column"
+      >
+        <p>
+           
+          third column
+           
+        </p>
+        <div
+          className="sc-eDvSVe bXsRJg"
+          data-testid="card"
+        >
+          <p>
+             
+            third card
+             
+          </p>
+          <span>
+             
+            third descriptions
+             
+          </span>
+          <span>
+             
+            1
+             
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 `;

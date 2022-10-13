@@ -7,3 +7,4 @@ export * from "./colormode-switcher.component";
 export * from "./card.component";
 export * from "./board.component";
 export * from "./app-settings-menu.component";
+export * from "./boards-list.component";
