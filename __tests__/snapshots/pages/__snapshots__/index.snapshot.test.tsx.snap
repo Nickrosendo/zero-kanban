@@ -10,7 +10,7 @@ exports[`should render homepage matching snapshot 1`] = `
   >
      
     <div
-      className="logocomponent__StyledLogo-sc-8hsg5f-0 jqwuzu"
+      className="logocomponent__StyledLogo-sc-8hsg5f-0 fKGdxL"
     >
       <svg
         data-testid="logo"
@@ -44,11 +44,11 @@ exports[`should render homepage matching snapshot 1`] = `
       </p>
     </div>
     <div
-      className="boards-listcomponent__StyledBoardsList-sc-1hvqd7k-0 gEWyTN"
+      className="boards-listcomponent__StyledBoardsList-sc-1hvqd7k-0 bTyisZ"
       data-testid="boards-list"
     >
       <div
-        className="boards-list-itemcomponent__StyledBoardsListItem-sc-2mvrbr-0 iLQfSX"
+        className="boards-list-itemcomponent__StyledBoardsListItem-sc-2mvrbr-0 sMxmr"
         data-testid="boards-list-item"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -61,10 +61,10 @@ exports[`should render homepage matching snapshot 1`] = `
            
         </p>
         <div
-          className="boards-list-itemcomponent__ActionsContainer-sc-2mvrbr-2 iMRcJp"
+          className="boards-list-itemcomponent__ActionsContainer-sc-2mvrbr-2 eMpiCR"
         >
           <button
-            className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 hbaZZN"
+            className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 eRGfet"
           >
             <svg
               fill="currentColor"
@@ -86,7 +86,7 @@ exports[`should render homepage matching snapshot 1`] = `
             </svg>
           </button>
           <button
-            className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 hbaZZN"
+            className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 eRGfet"
           >
             <svg
               fill="currentColor"
@@ -110,7 +110,7 @@ exports[`should render homepage matching snapshot 1`] = `
         </div>
       </div>
       <div
-        className="boards-list-itemcomponent__StyledBoardsListItem-sc-2mvrbr-0 iLQfSX"
+        className="boards-list-itemcomponent__StyledBoardsListItem-sc-2mvrbr-0 sMxmr"
         data-testid="boards-list-item"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -123,10 +123,10 @@ exports[`should render homepage matching snapshot 1`] = `
            
         </p>
         <div
-          className="boards-list-itemcomponent__ActionsContainer-sc-2mvrbr-2 iMRcJp"
+          className="boards-list-itemcomponent__ActionsContainer-sc-2mvrbr-2 eMpiCR"
         >
           <button
-            className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 hbaZZN"
+            className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 eRGfet"
           >
             <svg
               fill="currentColor"
@@ -148,7 +148,7 @@ exports[`should render homepage matching snapshot 1`] = `
             </svg>
           </button>
           <button
-            className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 hbaZZN"
+            className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 eRGfet"
           >
             <svg
               fill="currentColor"
@@ -172,7 +172,7 @@ exports[`should render homepage matching snapshot 1`] = `
         </div>
       </div>
       <div
-        className="boards-list-itemcomponent__StyledBoardsListItem-sc-2mvrbr-0 iLQfSX"
+        className="boards-list-itemcomponent__StyledBoardsListItem-sc-2mvrbr-0 sMxmr"
         data-testid="boards-list-item"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -185,10 +185,10 @@ exports[`should render homepage matching snapshot 1`] = `
            
         </p>
         <div
-          className="boards-list-itemcomponent__ActionsContainer-sc-2mvrbr-2 iMRcJp"
+          className="boards-list-itemcomponent__ActionsContainer-sc-2mvrbr-2 eMpiCR"
         >
           <button
-            className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 hbaZZN"
+            className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 eRGfet"
           >
             <svg
               fill="currentColor"
@@ -210,7 +210,7 @@ exports[`should render homepage matching snapshot 1`] = `
             </svg>
           </button>
           <button
-            className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 hbaZZN"
+            className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 eRGfet"
           >
             <svg
               fill="currentColor"
