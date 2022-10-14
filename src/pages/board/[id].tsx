@@ -1,9 +1,8 @@
 import type { NextPage } from "next";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 
-import { Logo, Container, Board, BackButton } from "@root/components";
+import { Logo, Board, BackButton } from "@root/components";
 import { BoardType } from "@root/types";
 import { defaultBoards } from "@root/data";
 
@@ -19,11 +18,9 @@ const BoardPage: NextPage<HomeProps> = () => {
 
   return (
     <StyledMain>
-      <Container>
-        <BackButton to={"/board"} />
-        <Logo />
-        <Board board={myBoard} />
-      </Container>
+      <BackButton to={"/board"} />
+      <Logo />
+      <Board board={myBoard} />
     </StyledMain>
   );
 };
@@ -32,7 +29,6 @@ export default BoardPage;
 
 const StyledMain = styled.main`
   background: ${(props) => props.theme.bg};
-  padding: 1rem;
   overflow: hidden;
   position: relative;
   top: 0;

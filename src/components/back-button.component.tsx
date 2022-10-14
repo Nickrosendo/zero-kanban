@@ -10,7 +10,7 @@ export const BackButton: React.FC<BackButtonProps> = ({ to = "/" }) => {
   return (
     <Link href={to}>
       <IconButton>
-        <AiOutlineLeft />
+        <AiOutlineLeft size={"1.5rem"} />
       </IconButton>
     </Link>
   );

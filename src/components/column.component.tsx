@@ -12,14 +12,29 @@ export const Column: React.FC<ColumnProps> = ({ column = {} }) => {
   return (
     <StyledColumn data-testid="column">
       <p> {column?.name} </p>
-      {column?.cards?.map((card) => (
-        <Card key={card?.id} card={card} />
-      ))}
+      <CardsContainer>
+        {column?.cards?.map((card) => (
+          <Card key={card?.id} card={card} />
+        ))}
+      </CardsContainer>
     </StyledColumn>
   );
 };
 
 const StyledColumn = styled.div`
   color: ${(props) => props.theme.fg};
-  background: ${(props) => props.theme.bg};
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
+const CardsContainer = styled.div`
+  background: ${(props) => props.theme.fg};
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid ${(props) => props.theme.fg};
+  border-radius: 0.5rem;
+  flex: 1;
 `;

@@ -13,14 +13,30 @@ export const Board: React.FC<BoardProps> = ({ board = {} }) => {
     <StyledBoard data-testid="board">
       <h1> {board?.name} </h1>
 
-      {board?.columns?.map((column) => (
-        <Column key={column.id} column={column} />
-      ))}
+      <ColumnsContainer>
+        {board?.columns?.map((column) => (
+          <Column key={column.id} column={column} />
+        ))}
+      </ColumnsContainer>
     </StyledBoard>
   );
 };
 
 const StyledBoard = styled.div`
+  padding: 1rem 2rem;
   color: ${(props) => props.theme.fg};
-  background: ${(props) => props.theme.bg};
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100vw;
+  flex: 1;
+`;
+
+const ColumnsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1;
 `;
