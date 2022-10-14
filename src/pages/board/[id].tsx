@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 
-import { BoardsList, Logo, Container } from "@root/components";
+import { Logo, Container, Board, BackButton } from "@root/components";
 import { BoardType } from "@root/types";
 import { defaultBoards } from "@root/data";
 
@@ -9,20 +11,24 @@ export interface HomeProps {
   cookies?: string;
 }
 
-const Home: NextPage<HomeProps> = () => {
-  const myBoards: BoardType[] = defaultBoards;
+const BoardPage: NextPage<HomeProps> = () => {
+  const router = useRouter();
+  const { id } = router.query;
+  const myBoard: BoardType =
+    defaultBoards.find((board) => board.id === id) || defaultBoards[0];
 
   return (
     <StyledMain>
       <Container>
+        <BackButton to={"/board"} />
         <Logo />
-        <BoardsList boards={myBoards} />
+        <Board board={myBoard} />
       </Container>
     </StyledMain>
   );
 };
 
-export default Home;
+export default BoardPage;
 
 const StyledMain = styled.main`
   background: ${(props) => props.theme.bg};

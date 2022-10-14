@@ -1,10 +1,10 @@
-import type { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
+import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const theme = {
-    fg: "palevioletred",
-    bg: "white",
+    fg: "#be4d25",
+    bg: "#fff",
   };
 
   return (

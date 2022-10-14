@@ -3,11 +3,6 @@ import styled from "styled-components";
 
 import { CardType } from "@root/types";
 
-const StyledCard = styled.div`
-  color: ${(props) => props.theme.fg};
-  background: ${(props) => props.theme.bg};
-`;
-
 export interface CardProps {
   card: CardType;
 }
@@ -21,3 +16,8 @@ export const Card: React.FC<CardProps> = ({ card = {} }) => {
     </StyledCard>
   );
 };
+
+const StyledCard = styled.div`
+  color: ${(props) => props.theme.fg};
+  background: ${(props) => props.theme.bg};
+`;

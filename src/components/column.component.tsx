@@ -4,11 +4,6 @@ import styled from "styled-components";
 import { ColumnType } from "@root/types";
 import { Card } from "./card.component";
 
-const StyledColumn = styled.div`
-  color: ${(props) => props.theme.fg};
-  background: ${(props) => props.theme.bg};
-`;
-
 export interface ColumnProps {
   column: ColumnType;
 }
@@ -23,3 +18,8 @@ export const Column: React.FC<ColumnProps> = ({ column = {} }) => {
     </StyledColumn>
   );
 };
+
+const StyledColumn = styled.div`
+  color: ${(props) => props.theme.fg};
+  background: ${(props) => props.theme.bg};
+`;

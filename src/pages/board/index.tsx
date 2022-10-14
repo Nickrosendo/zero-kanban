@@ -9,7 +9,7 @@ export interface HomeProps {
   cookies?: string;
 }
 
-const Home: NextPage<HomeProps> = () => {
+const Board: NextPage<HomeProps> = () => {
   const myBoards: BoardType[] = defaultBoards;
 
   return (
@@ -22,7 +22,7 @@ const Home: NextPage<HomeProps> = () => {
   );
 };
 
-export default Home;
+export default Board;
 
 const StyledMain = styled.main`
   background: ${(props) => props.theme.bg};
