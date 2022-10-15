@@ -27,7 +27,7 @@ const BoardPage: NextPage<HomeProps> = () => {
 
 export default BoardPage;
 
-const StyledMain = styled.main`
+const StyledMain = styled.div`
   background: ${(props) => props.theme.bg};
   overflow: hidden;
   position: relative;

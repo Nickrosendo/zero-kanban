@@ -24,7 +24,7 @@ const Home: NextPage<HomeProps> = () => {
 
 export default Home;
 
-const StyledMain = styled.main`
+const StyledMain = styled.div`
   background: ${(props) => props.theme.bg};
   padding: 1rem;
   overflow: hidden;
