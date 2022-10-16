@@ -1,18 +1,16 @@
 import { BoardType } from "@root/types";
 
-import { objectId } from "@root/helpers";
-
 export const defaultBoards: BoardType[] = [
   {
-    id: objectId(),
+    id: "1",
     name: "My first board",
     columns: [
       {
-        id: objectId(),
+        id: "column-1",
         name: "Backlog",
         cards: [
           {
-            id: objectId(),
+            id: "card-1",
             name: "first card",
             status: 1,
             description: "first descriptions",
@@ -20,11 +18,11 @@ export const defaultBoards: BoardType[] = [
         ],
       },
       {
-        id: objectId(),
+        id: "column-2",
         name: "To do",
         cards: [
           {
-            id: objectId(),
+            id: "column-2-card-1",
             name: "first card",
             status: 1,
             description: "first descriptions",
@@ -32,55 +30,19 @@ export const defaultBoards: BoardType[] = [
         ],
       },
       {
-        id: objectId(),
+        id: "column-3",
         name: "Doing",
         cards: [],
       },
       {
-        id: objectId(),
+        id: "column-4",
         name: "Testing",
         cards: [],
       },
       {
-        id: objectId(),
+        id: "column-5",
         name: "Done",
         cards: [],
-      },
-    ],
-  },
-  {
-    id: objectId(),
-    name: "My second board",
-    columns: [
-      {
-        id: objectId(),
-        name: "second column",
-        cards: [
-          {
-            id: objectId(),
-            name: "second card",
-            status: 1,
-            description: "second descriptions",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: objectId(),
-    name: "My third board",
-    columns: [
-      {
-        id: objectId(),
-        name: "third column",
-        cards: [
-          {
-            id: objectId(),
-            name: "third card",
-            status: 1,
-            description: "third descriptions",
-          },
-        ],
       },
     ],
   },
