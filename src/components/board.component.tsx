@@ -16,7 +16,6 @@ export const Board: React.FC<BoardProps> = ({ board }) => {
     (list: ColumnType[], startIndex: number, endIndex: number) => {
       const result = Array.from(list);
       const [removed] = result.splice(startIndex, 1);
-      console.log("removed: ", removed);
       result.splice(endIndex, 0, removed);
 
       return result;
@@ -24,18 +23,20 @@ export const Board: React.FC<BoardProps> = ({ board }) => {
     []
   );
 
-  const onDragEnd = useCallback((result: any) => {
-    console.log("result: ", result);
-    // dropped outside the list
-    if (!result.destination) return;
-    const items = reorder(
-      columns,
-      result.source.index,
-      result.destination.index
-    );
-    console.log("items: ", items);
-    setColumns(items);
-  }, []);
+  const onDragEnd = useCallback(
+    (result: any) => {
+      // dropped outside the list
+      if (!result.destination) return;
+
+      const items = reorder(
+        columns,
+        result.source.index,
+        result.destination.index
+      );
+      setColumns(items);
+    },
+    [columns]
+  );
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
@@ -44,8 +45,12 @@ export const Board: React.FC<BoardProps> = ({ board }) => {
 
         <ColumnsContainer>
           {columns?.map((column, index) => (
-            <Droppable droppableId={column.id} key={column.id}>
-              {(provided, snapshot) => (
+            <Droppable
+              direction={"horizontal"}
+              droppableId={column.id}
+              key={column.id}
+            >
+              {(provided) => (
                 <ColumnContainer
                   ref={provided.innerRef}
                   {...provided.droppableProps}
@@ -55,7 +60,7 @@ export const Board: React.FC<BoardProps> = ({ board }) => {
                     index={index}
                     key={column.id}
                   >
-                    {(draggableProvider, draggableSnapshot) => (
+                    {(draggableProvider) => (
                       <DraggableColumn
                         {...draggableProvider.draggableProps}
                         {...draggableProvider.dragHandleProps}
@@ -85,6 +90,7 @@ const StyledBoard = styled.div`
   align-items: flex-start;
   width: 100vw;
   flex: 1;
+  overflow: auto;
 `;
 
 const ColumnsContainer = styled.div`
