@@ -15,6 +15,12 @@ export const defaultBoards: BoardType[] = [
             status: 1,
             description: "first descriptions",
           },
+          {
+            id: "card-2",
+            name: "second card",
+            status: 1,
+            description: "second descriptions",
+          },
         ],
       },
       {

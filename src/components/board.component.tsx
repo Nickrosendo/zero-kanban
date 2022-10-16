@@ -1,6 +1,11 @@
 import React, { useCallback, useState } from "react";
 import styled from "styled-components";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import {
+  DragDropContext,
+  Droppable,
+  Draggable,
+  DropResult,
+} from "react-beautiful-dnd";
 
 import { BoardType, ColumnType } from "@root/types";
 import { Column } from "./column.component";
@@ -12,28 +17,35 @@ export interface BoardProps {
 export const Board: React.FC<BoardProps> = ({ board }) => {
   const [columns, setColumns] = useState<ColumnType[]>(board?.columns ?? []);
 
-  const reorder = useCallback(
-    (list: ColumnType[], startIndex: number, endIndex: number) => {
-      const result = Array.from(list);
-      const [removed] = result.splice(startIndex, 1);
-      result.splice(endIndex, 0, removed);
-
-      return result;
-    },
-    []
-  );
-
   const onDragEnd = useCallback(
-    (result: any) => {
-      // dropped outside the list
-      if (!result.destination) return;
+    (result: DropResult) => {
+      const { destination, source } = result;
 
-      const items = reorder(
-        columns,
-        result.source.index,
-        result.destination.index
+      if (
+        !destination ||
+        (destination.droppableId === source.droppableId &&
+          destination.index === source.index)
+      )
+        return;
+
+      const updatedColumns = [...columns];
+
+      const sourceColumnIndex = updatedColumns.findIndex(
+        (column) => column.id === source.droppableId
       );
-      setColumns(items);
+      const destinationColumnIndex = updatedColumns.findIndex(
+        (column) => column.id === destination.droppableId
+      );
+      if (sourceColumnIndex > -1 && destinationColumnIndex > -1) {
+        const item = updatedColumns[sourceColumnIndex].cards[source.index];
+        updatedColumns[sourceColumnIndex].cards.splice(source.index, 1);
+        updatedColumns[destinationColumnIndex].cards.splice(
+          destination.index,
+          0,
+          item
+        );
+        setColumns(updatedColumns);
+      }
     },
     [columns]
   );
@@ -44,32 +56,14 @@ export const Board: React.FC<BoardProps> = ({ board }) => {
         <h1> {board?.name} </h1>
 
         <ColumnsContainer>
-          {columns?.map((column, index) => (
-            <Droppable
-              direction={"horizontal"}
-              droppableId={column.id}
-              key={column.id}
-            >
+          {columns?.map((column) => (
+            <Droppable droppableId={column.id} key={column.id}>
               {(provided) => (
                 <ColumnContainer
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >
-                  <Draggable
-                    draggableId={column.id}
-                    index={index}
-                    key={column.id}
-                  >
-                    {(draggableProvider) => (
-                      <DraggableColumn
-                        {...draggableProvider.draggableProps}
-                        {...draggableProvider.dragHandleProps}
-                        ref={draggableProvider.innerRef}
-                      >
-                        <Column column={column} />
-                      </DraggableColumn>
-                    )}
-                  </Draggable>
+                  <Column column={column} />
                   {provided.placeholder}
                 </ColumnContainer>
               )}

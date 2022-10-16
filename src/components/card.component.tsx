@@ -13,7 +13,6 @@ export const Card: React.FC<CardProps> = ({ card = {} }) => {
       <p> {card.name} </p>
       <CardContent>
         <span> {card.description} </span>
-        <span> {card.status} </span>
       </CardContent>
     </StyledCard>
   );
@@ -35,6 +34,10 @@ const StyledCard = styled.div`
 const CardContent = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   gap: 1rem;
+  width: 100%;
+  background: #eee;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 `;
