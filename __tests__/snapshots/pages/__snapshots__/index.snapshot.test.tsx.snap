@@ -52,6 +52,7 @@ exports[`should render homepage matching snapshot 1`] = `
         data-testid="boards-list-item"
         onClick={[Function]}
         onMouseEnter={[Function]}
+        onTouchStart={[Function]}
       >
         <p
           className="boards-list-itemcomponent__ItemTitle-sc-2mvrbr-1 kiXllC"
@@ -114,6 +115,7 @@ exports[`should render homepage matching snapshot 1`] = `
         data-testid="boards-list-item"
         onClick={[Function]}
         onMouseEnter={[Function]}
+        onTouchStart={[Function]}
       >
         <p
           className="boards-list-itemcomponent__ItemTitle-sc-2mvrbr-1 kiXllC"
@@ -176,6 +178,7 @@ exports[`should render homepage matching snapshot 1`] = `
         data-testid="boards-list-item"
         onClick={[Function]}
         onMouseEnter={[Function]}
+        onTouchStart={[Function]}
       >
         <p
           className="boards-list-itemcomponent__ItemTitle-sc-2mvrbr-1 kiXllC"
