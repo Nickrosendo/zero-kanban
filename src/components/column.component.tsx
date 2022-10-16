@@ -24,6 +24,7 @@ export const Column: React.FC<ColumnProps> = ({ column = {} }) => {
 const StyledColumn = styled.div`
   color: ${(props) => props.theme.fg};
   height: 100%;
+  min-width: 15rem;
   display: flex;
   flex-direction: column;
 `;
