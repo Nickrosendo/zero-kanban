@@ -1,24 +1,83 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import styled from "styled-components";
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
-import { BoardType } from "@root/types";
+import { BoardType, ColumnType } from "@root/types";
 import { Column } from "./column.component";
 
 export interface BoardProps {
   board: BoardType;
 }
 
-export const Board: React.FC<BoardProps> = ({ board = {} }) => {
-  return (
-    <StyledBoard data-testid="board">
-      <h1> {board?.name} </h1>
+export const Board: React.FC<BoardProps> = ({ board }) => {
+  const [columns, setColumns] = useState<ColumnType[]>(board?.columns ?? []);
 
-      <ColumnsContainer>
-        {board?.columns?.map((column) => (
-          <Column key={column.id} column={column} />
-        ))}
-      </ColumnsContainer>
-    </StyledBoard>
+  const reorder = useCallback(
+    (list: ColumnType[], startIndex: number, endIndex: number) => {
+      const result = Array.from(list);
+      const [removed] = result.splice(startIndex, 1);
+      result.splice(endIndex, 0, removed);
+
+      return result;
+    },
+    []
+  );
+
+  const onDragEnd = useCallback(
+    (result: any) => {
+      // dropped outside the list
+      if (!result.destination) return;
+
+      const items = reorder(
+        columns,
+        result.source.index,
+        result.destination.index
+      );
+      setColumns(items);
+    },
+    [columns]
+  );
+
+  return (
+    <DragDropContext onDragEnd={onDragEnd}>
+      <StyledBoard data-testid="board">
+        <h1> {board?.name} </h1>
+
+        <ColumnsContainer>
+          {columns?.map((column, index) => (
+            <Droppable
+              direction={"horizontal"}
+              droppableId={column.id}
+              key={column.id}
+            >
+              {(provided) => (
+                <ColumnContainer
+                  ref={provided.innerRef}
+                  {...provided.droppableProps}
+                >
+                  <Draggable
+                    draggableId={column.id}
+                    index={index}
+                    key={column.id}
+                  >
+                    {(draggableProvider) => (
+                      <DraggableColumn
+                        {...draggableProvider.draggableProps}
+                        {...draggableProvider.dragHandleProps}
+                        ref={draggableProvider.innerRef}
+                      >
+                        <Column column={column} />
+                      </DraggableColumn>
+                    )}
+                  </Draggable>
+                  {provided.placeholder}
+                </ColumnContainer>
+              )}
+            </Droppable>
+          ))}
+        </ColumnsContainer>
+      </StyledBoard>
+    </DragDropContext>
   );
 };
 
@@ -31,6 +90,7 @@ const StyledBoard = styled.div`
   align-items: flex-start;
   width: 100vw;
   flex: 1;
+  overflow: auto;
 `;
 
 const ColumnsContainer = styled.div`
@@ -38,5 +98,15 @@ const ColumnsContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  flex: 1;
+`;
+
+const ColumnContainer = styled.div`
+  height: 100%;
+  flex: 1;
+`;
+
+const DraggableColumn = styled.div`
+  height: 100%;
   flex: 1;
 `;

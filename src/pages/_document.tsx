@@ -4,14 +4,20 @@ import Document, {
   Main,
   NextScript,
   DocumentContext,
+  DocumentInitialProps,
 } from "next/document";
+import React from "react";
+import { resetServerContext } from "react-beautiful-dnd";
 import { ServerStyleSheet } from "styled-components";
 
-class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
+type Props = {};
+
+class MyDocument extends Document<Props> {
+  static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
-
     try {
       ctx.renderPage = () =>
         originalRenderPage({
@@ -20,6 +26,7 @@ class MyDocument extends Document {
         });
 
       const initialProps = await Document.getInitialProps(ctx);
+      resetServerContext();
       return {
         ...initialProps,
         styles: (
