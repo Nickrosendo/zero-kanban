@@ -6,11 +6,12 @@ import { Card } from "./card.component";
 
 export interface ColumnProps {
   column: ColumnType;
+  dragRef?: React.ForwardedRef<HTMLDivElement>
 }
 
-export const Column: React.FC<ColumnProps> = ({ column = {} }) => {
+export const Column: React.FC<ColumnProps> = ({ column = {}, dragRef }) => {
   return (
-    <StyledColumn data-testid="column">
+    <StyledColumn data-testid="column" ref={dragRef}>
       <p> {column?.name} </p>
       <CardsContainer>
         {column?.cards?.map((card) => (
