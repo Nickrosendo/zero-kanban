@@ -10,7 +10,7 @@ export interface ColumnProps {
 
 export const Column: React.FC<ColumnProps> = ({ column }) => {
   return (
-    <StyledColumn>
+    <StyledColumn data-testid="column">
       <p> {column?.name} </p>
       <CardsContainer>
         {column?.cards?.map((card) => (

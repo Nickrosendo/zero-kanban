@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import styled from "styled-components";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
-import { BoardType } from "@root/types";
+import { BoardType, ColumnType } from "@root/types";
 import { Column } from "./column.component";
 
 export interface BoardProps {
@@ -10,7 +10,7 @@ export interface BoardProps {
 }
 
 export const Board: React.FC<BoardProps> = ({ board }) => {
-  const [columns, setColumns] = useState<ColumnType[]>(board.columns ?? []);
+  const [columns, setColumns] = useState<ColumnType[]>(board?.columns ?? []);
 
   const reorder = useCallback(
     (list: ColumnType[], startIndex: number, endIndex: number) => {
