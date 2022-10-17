@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from "react";
 import styled from "styled-components";
 import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
+import produce from "immer";
 
 import { BoardType, ColumnType } from "@root/types";
 import { Column } from "./column.component";
@@ -23,24 +24,21 @@ export const Board: React.FC<BoardProps> = ({ board }) => {
       )
         return;
 
-      const updatedColumns = [...columns];
+      setColumns(
+        produce((draft) => {
+          const sourceColumn = draft.find(
+            (column) => column.id === source.droppableId
+          );
+          const destinationColumn = draft.find(
+            (column) => column.id === destination.droppableId
+          );
+          const item = sourceColumn?.cards?.[source.index];
 
-      const sourceColumnIndex = updatedColumns.findIndex(
-        (column) => column.id === source.droppableId
+          sourceColumn?.cards?.splice?.(source.index, 1);
+          if (item)
+            destinationColumn?.cards?.splice(destination.index, 0, item);
+        })
       );
-      const destinationColumnIndex = updatedColumns.findIndex(
-        (column) => column.id === destination.droppableId
-      );
-      if (sourceColumnIndex > -1 && destinationColumnIndex > -1) {
-        const item = updatedColumns[sourceColumnIndex].cards[source.index];
-        updatedColumns[sourceColumnIndex].cards.splice(source.index, 1);
-        updatedColumns[destinationColumnIndex].cards.splice(
-          destination.index,
-          0,
-          item
-        );
-        setColumns(updatedColumns);
-      }
     },
     [columns]
   );
