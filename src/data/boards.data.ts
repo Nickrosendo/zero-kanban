@@ -12,13 +12,11 @@ export const defaultBoards: BoardType[] = [
           {
             id: "card-1",
             name: "first card",
-            status: 1,
             description: "first descriptions",
           },
           {
             id: "card-2",
             name: "second card",
-            status: 1,
             description: "second descriptions",
           },
         ],
@@ -30,7 +28,6 @@ export const defaultBoards: BoardType[] = [
           {
             id: "column-2-card-1",
             name: "first card",
-            status: 1,
             description: "first descriptions",
           },
         ],

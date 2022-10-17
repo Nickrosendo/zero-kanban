@@ -2,8 +2,10 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
+import { useDispatch } from "react-redux";
 
 import { BoardType } from "@root/types";
+import { openBoard } from "@root/store/board-slice";
 
 export interface BoardsListItemProps {
   board: BoardType;
@@ -12,9 +14,17 @@ export interface BoardsListItemProps {
 export const BoardsListItem: React.FC<BoardsListItemProps> = ({
   board = {},
 }) => {
+  const dispatch = useDispatch();
+  const handleOpenBoard = () => {
+    dispatch(openBoard(board));
+  };
+
   return (
     <Link href={`/board/${board?.id}`}>
-      <StyledBoardsListItem data-testid="boards-list-item">
+      <StyledBoardsListItem
+        data-testid="boards-list-item"
+        onClick={handleOpenBoard}
+      >
         <ItemTitle> {board?.name} </ItemTitle>
         <ActionsContainer>
           <IconButton>

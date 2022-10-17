@@ -1,11 +1,6 @@
 import React, { useCallback, useState } from "react";
 import styled from "styled-components";
-import {
-  DragDropContext,
-  Droppable,
-  Draggable,
-  DropResult,
-} from "react-beautiful-dnd";
+import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
 
 import { BoardType, ColumnType } from "@root/types";
 import { Column } from "./column.component";

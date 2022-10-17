@@ -1,26 +1,49 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import styled from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
 
 import { Logo, Board, BackButton } from "@root/components";
-import { BoardType } from "@root/types";
-import { defaultBoards } from "@root/data";
+import {
+  openBoard,
+  closeBoard,
+  selectBoardState,
+} from "@root/store/board-slice";
+import { useEffect } from "react";
 
 export interface HomeProps {
   cookies?: string;
 }
 
 const BoardPage: NextPage<HomeProps> = () => {
+  const { currentBoard, boards } = useSelector(selectBoardState);
+  const dispatch = useDispatch();
   const router = useRouter();
-  const { id } = router.query;
-  const myBoard: BoardType =
-    defaultBoards.find((board) => board.id === id) || defaultBoards[0];
+  useEffect(() => {
+    setupBoard();
+  }, []);
+
+  const setupBoard = () => {
+    if (!currentBoard) {
+      const { id } = router.query;
+      const board = boards.find((b) => b.id === id || boards[0]);
+      dispatch(openBoard(board));
+    }
+  };
+
+  const handleCloseBoard = () => {
+    dispatch(closeBoard({}));
+  };
+
+  if (!currentBoard) {
+    return <p> ...loading </p>;
+  }
 
   return (
     <StyledMain>
-      <BackButton to={"/board"} />
+      <BackButton to={"/board"} onClick={handleCloseBoard} />
       <Logo />
-      <Board board={myBoard} />
+      <Board board={currentBoard} />
     </StyledMain>
   );
 };

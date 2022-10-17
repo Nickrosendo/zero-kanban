@@ -5,11 +5,15 @@ import { AiOutlineLeft } from "react-icons/ai";
 
 export interface BackButtonProps {
   to: string;
+  onClick: () => void;
 }
-export const BackButton: React.FC<BackButtonProps> = ({ to = "/" }) => {
+export const BackButton: React.FC<BackButtonProps> = ({
+  to = "/",
+  onClick = () => null,
+}) => {
   return (
     <Link href={to}>
-      <IconButton>
+      <IconButton onClick={onClick}>
         <AiOutlineLeft size={"1.5rem"} />
       </IconButton>
     </Link>

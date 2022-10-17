@@ -1,22 +1,23 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 
 import { BoardsList, Logo, Container } from "@root/components";
-import { BoardType } from "@root/types";
-import { defaultBoards } from "@root/data";
+import { selectBoardState } from "@root/store/board-slice";
 
 export interface HomeProps {
   cookies?: string;
 }
 
 const Home: NextPage<HomeProps> = () => {
-  const myBoards: BoardType[] = defaultBoards;
+  const boardsState = useSelector(selectBoardState);
+  const { boards } = boardsState;
 
   return (
     <StyledMain>
       <Container>
         <Logo />
-        <BoardsList boards={myBoards} />
+        <BoardsList boards={boards} />
       </Container>
     </StyledMain>
   );

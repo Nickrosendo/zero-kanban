@@ -2,16 +2,24 @@ import React, { useCallback } from "react";
 import styled from "styled-components";
 import { Draggable } from "react-beautiful-dnd";
 import { AiOutlinePlusCircle } from "react-icons/ai";
+import { useSelector, useDispatch } from "react-redux";
 
 import { ColumnType } from "@root/types";
 import { Card } from "./card.component";
+
+import { addCard, selectBoardState } from "@root/store/board-slice";
 
 export interface ColumnProps {
   column: ColumnType;
 }
 
 export const Column: React.FC<ColumnProps> = ({ column }) => {
-  const handleAddCard = useCallback(() => {}, []);
+  const { currentBoard } = useSelector(selectBoardState);
+  const dispatch = useDispatch();
+
+  const handleAddCard = useCallback(() => {
+    dispatch(addCard({ boardId: currentBoard?.id, columnId: column.id }));
+  }, []);
 
   return (
     <StyledColumn data-testid="column">
