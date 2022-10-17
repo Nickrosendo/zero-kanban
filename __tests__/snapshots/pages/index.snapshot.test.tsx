@@ -2,6 +2,8 @@ import React from "react";
 import renderer from "react-test-renderer";
 import Index from "@root/pages/index";
 
+import { StoreWrapper } from "@root/helpers";
+
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
@@ -17,6 +19,12 @@ Object.defineProperty(window, "matchMedia", {
 });
 
 it("should render homepage matching snapshot", () => {
-  const tree = renderer.create(<Index />).toJSON();
+  const tree = renderer
+    .create(
+      <StoreWrapper>
+        <Index />
+      </StoreWrapper>
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

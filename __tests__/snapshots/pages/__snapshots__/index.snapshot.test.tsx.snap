@@ -1,116 +1,120 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render homepage matching snapshot 1`] = `
-<main
-  className="pages__StyledMain-sc-106jlst-0 cLWrPz"
->
-  <div
-    className="containercomponent__StyledContainer-sc-17dh86n-0 cOPXrI"
-    data-testid="container"
+Array [
+  " ",
+  <main
+    className="pages__StyledMain-sc-106jlst-0 cLWrPz"
   >
-     
     <div
-      className="logocomponent__StyledLogo-sc-8hsg5f-0 fKGdxL"
+      className="containercomponent__StyledContainer-sc-17dh86n-0 cOPXrI"
+      data-testid="container"
     >
-      <svg
-        data-testid="logo"
-        fill="currentColor"
-        height="5rem"
-        stroke="currentColor"
-        strokeWidth="0"
-        style={
-          Object {
-            "color": undefined,
-          }
-        }
-        viewBox="0 0 16 16"
-        width="5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"
-        />
-        <path
-          d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
-        />
-        <path
-          d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
-        />
-      </svg>
-      <p
-        className="logocomponent__StyledTitle-sc-8hsg5f-1 HycyR"
-      >
-         ZeroKanban 
-      </p>
-    </div>
-    <div
-      className="boards-listcomponent__StyledBoardsList-sc-1hvqd7k-0 bTyisZ"
-      data-testid="boards-list"
-    >
+       
       <div
-        className="boards-list-itemcomponent__StyledBoardsListItem-sc-2mvrbr-0 sMxmr"
-        data-testid="boards-list-item"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
+        className="logocomponent__StyledLogo-sc-8hsg5f-0 fKGdxL"
       >
+        <svg
+          data-testid="logo"
+          fill="currentColor"
+          height="5rem"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width="5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"
+          />
+          <path
+            d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+          />
+          <path
+            d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+          />
+        </svg>
         <p
-          className="boards-list-itemcomponent__ItemTitle-sc-2mvrbr-1 kiXllC"
+          className="logocomponent__StyledTitle-sc-8hsg5f-1 HycyR"
         >
-           
-          My first board
-           
+           ZeroKanban 
         </p>
+      </div>
+      <div
+        className="boards-listcomponent__StyledBoardsList-sc-1hvqd7k-0 bTyisZ"
+        data-testid="boards-list"
+      >
         <div
-          className="boards-list-itemcomponent__ActionsContainer-sc-2mvrbr-2 eMpiCR"
+          className="boards-list-itemcomponent__StyledBoardsListItem-sc-2mvrbr-0 sMxmr"
+          data-testid="boards-list-item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
         >
-          <button
-            className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 eRGfet"
+          <p
+            className="boards-list-itemcomponent__ItemTitle-sc-2mvrbr-1 kiXllC"
           >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 1024 1024"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32zm-622.3-84c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9z"
-              />
-            </svg>
-          </button>
-          <button
-            className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 eRGfet"
+             
+            My first board
+             
+          </p>
+          <div
+            className="boards-list-itemcomponent__ActionsContainer-sc-2mvrbr-2 eMpiCR"
           >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 1024 1024"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+            <button
+              className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 eRGfet"
             >
-              <path
-                d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"
-              />
-            </svg>
-          </button>
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 1024 1024"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32zm-622.3-84c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9z"
+                />
+              </svg>
+            </button>
+            <button
+              className="boards-list-itemcomponent__IconButton-sc-2mvrbr-3 eRGfet"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 1024 1024"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
+       
     </div>
-     
-  </div>
-</main>
+  </main>,
+  " ",
+]
 `;

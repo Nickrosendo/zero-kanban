@@ -3,7 +3,7 @@ import { createWrapper } from "next-redux-wrapper";
 
 import { boardSlice } from "./board-slice";
 
-const makeStore = () =>
+export const makeStore = () =>
   configureStore({
     reducer: {
       [boardSlice.name]: boardSlice.reducer,

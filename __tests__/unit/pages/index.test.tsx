@@ -3,8 +3,10 @@
  */
 
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import Home from "@root/pages/index";
+
+import { renderWithProviders } from "@root/helpers";
 
 Object.defineProperty(window, "matchMedia", {
   writable: true,
@@ -22,7 +24,7 @@ Object.defineProperty(window, "matchMedia", {
 
 describe("Home page tests", () => {
   it("renders the header component", () => {
-    render(<Home />);
+    renderWithProviders(<Home />);
 
     const element = screen.getByRole("main");
 

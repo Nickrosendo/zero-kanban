@@ -3,19 +3,14 @@
  */
 
 import React from "react";
-import { render, screen } from "@testing-library/react";
-import { Provider } from "react-redux";
+import { screen } from "@testing-library/react";
 
 import { Column } from "@root/components";
+import { renderWithProviders } from "@root/helpers";
 
 describe("Column component tests", () => {
   it("should render without crashing", () => {
-    render(
-      <Provider store={{}}>
-        {" "}
-        <Column />{" "}
-      </Provider>
-    );
+    renderWithProviders(<Column />);
 
     const element = screen.getByTestId("column");
 
