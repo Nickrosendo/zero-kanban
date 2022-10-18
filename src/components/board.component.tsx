@@ -16,6 +16,14 @@ export interface ColumnFilter {
   value: boolean;
 }
 
+export interface FilterItem {
+  id: string;
+  name: string;
+  value: boolean;
+}
+
+export type BoardFilters = Record<string, FilterItem>;
+
 export const Board: React.FC<BoardProps> = () => {
   const board = defaultBoards[0];
   const [columns, setColumns] = useState<ColumnType[]>(board?.columns ?? []);
@@ -24,7 +32,7 @@ export const Board: React.FC<BoardProps> = () => {
   const [isFilterDropdownOpen, setFilterDropdownOpen] =
     useState<boolean>(false);
   const [searchText, setSearchText] = useState<string>("");
-  const [filters, setFilters] = useState<any>({
+  const [filters, setFilters] = useState<BoardFilters>({
     backlog: { id: "backlog", name: "Backlog", value: true },
     todo: { id: "todo", name: "To do", value: true },
     doing: { id: "doing", name: "Doing", value: true },

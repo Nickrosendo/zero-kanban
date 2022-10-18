@@ -27,14 +27,10 @@ class MyDocument extends Document<Props> {
 
       const initialProps = await Document.getInitialProps(ctx);
       resetServerContext();
+      const styleTags = sheet.getStyleElement();
       return {
         ...initialProps,
-        styles: (
-          <>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
-          </>
-        ),
+        styles: styleTags,
       };
     } finally {
       sheet.seal();
