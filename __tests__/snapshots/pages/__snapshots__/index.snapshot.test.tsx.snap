@@ -2,586 +2,579 @@
 
 exports[`should render homepage matching snapshot 1`] = `
 <main
-  className="pages__StyledMain-sc-106jlst-0 cLWrPz"
+  className="pages__StyledMain-sc-106jlst-0 EysTc"
 >
   <div
-    className="containercomponent__StyledContainer-sc-17dh86n-0 cOPXrI"
-    data-testid="container"
+    className="logocomponent__StyledLogo-sc-8hsg5f-0 fKGdxL"
   >
-     
-    <div
-      className="logocomponent__StyledLogo-sc-8hsg5f-0 fKGdxL"
-    >
-      <svg
-        data-testid="logo"
-        fill="currentColor"
-        height="5rem"
-        stroke="currentColor"
-        strokeWidth="0"
-        style={
-          Object {
-            "color": undefined,
-          }
+    <svg
+      data-testid="logo"
+      fill="currentColor"
+      height="5rem"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
         }
-        viewBox="0 0 16 16"
-        width="5rem"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"
-        />
-        <path
-          d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
-        />
-        <path
-          d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
-        />
-      </svg>
-      <p
-        className="logocomponent__StyledTitle-sc-8hsg5f-1 HycyR"
-      >
-         ZeroKanban 
-      </p>
-    </div>
-    <div
-      className="boardcomponent__StyledBoard-sc-kxdno6-0 fcURYs"
-      data-testid="board"
+      }
+      viewBox="0 0 16 16"
+      width="5rem"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <h1>
-         
-        My first board
-         
-      </h1>
+      <path
+        d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"
+      />
+      <path
+        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+      />
+      <path
+        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+      />
+    </svg>
+    <p
+      className="logocomponent__StyledTitle-sc-8hsg5f-1 HycyR"
+    >
+       ZeroKanban 
+    </p>
+  </div>
+  <div
+    className="boardcomponent__StyledBoard-sc-kxdno6-0 fcURYs"
+    data-testid="board"
+  >
+    <h1>
+       
+      My first board
+       
+    </h1>
+    <div
+      className="boardcomponent__ColumnsContainer-sc-kxdno6-1 igicUn"
+    >
       <div
-        className="boardcomponent__ColumnsContainer-sc-kxdno6-1 igicUn"
+        className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
+        data-rbd-droppable-context-id="0"
+        data-rbd-droppable-id="column-1"
       >
         <div
-          className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
-          data-rbd-droppable-context-id="0"
-          data-rbd-droppable-id="column-1"
+          className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
+          data-testid="column"
         >
           <div
-            className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
-            data-testid="column"
+            className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
+          >
+            <p
+              className="columncomponent__ColumnName-sc-6j7h0r-5 iHrZzn"
+            >
+               
+              Backlog
+               
+            </p>
+            <button
+              className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
+              onClick={[Function]}
+            >
+              <svg
+                fill="currentColor"
+                height="1.5rem"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 1024 1024"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
+                />
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
           >
             <div
-              className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
-            >
-              <p
-                className="columncomponent__ColumnName-sc-6j7h0r-5 iHrZzn"
-              >
-                 
-                Backlog
-                 
-              </p>
-              <button
-                className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
-                onClick={[Function]}
-              >
-                <svg
-                  fill="currentColor"
-                  height="1.5rem"
-                  stroke="currentColor"
-                  strokeWidth="0"
-                  style={
-                    Object {
-                      "color": undefined,
-                    }
-                  }
-                  viewBox="0 0 1024 1024"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
-                  />
-                  <path
-                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
+              aria-describedby="rbd-hidden-text-0-hidden-text-0"
+              className="columncomponent__DraggableCard-sc-6j7h0r-2"
+              data-rbd-drag-handle-context-id="0"
+              data-rbd-drag-handle-draggable-id="card-1"
+              data-rbd-draggable-context-id="0"
+              data-rbd-draggable-id="card-1"
+              draggable={false}
+              onDragStart={[Function]}
+              onTransitionEnd={null}
+              role="button"
+              style={
+                Object {
+                  "transform": null,
+                  "transition": null,
+                }
+              }
+              tabIndex={0}
             >
               <div
-                aria-describedby="rbd-hidden-text-0-hidden-text-0"
-                className="columncomponent__DraggableCard-sc-6j7h0r-2"
-                data-rbd-drag-handle-context-id="0"
-                data-rbd-drag-handle-draggable-id="card-1"
-                data-rbd-draggable-context-id="0"
-                data-rbd-draggable-id="card-1"
-                draggable={false}
-                onDragStart={[Function]}
-                onTransitionEnd={null}
-                role="button"
-                style={
-                  Object {
-                    "transform": null,
-                    "transition": null,
-                  }
-                }
-                tabIndex={0}
+                className="cardcomponent__StyledCard-sc-5hi4h5-2 hsafpV"
+                data-testid="card"
               >
+                <p>
+                   
+                  first card
+                   
+                </p>
                 <div
-                  className="cardcomponent__StyledCard-sc-5hi4h5-2 hsafpV"
-                  data-testid="card"
+                  className="cardcomponent__CardContent-sc-5hi4h5-3 hbNWyV"
                 >
-                  <p>
+                  <span>
                      
-                    first card
+                    first descriptions
                      
-                  </p>
-                  <div
-                    className="cardcomponent__CardContent-sc-5hi4h5-3 hbNWyV"
-                  >
-                    <span>
-                       
-                      first descriptions
-                       
-                    </span>
-                  </div>
-                  <div
-                    className="cardcomponent__CardActions-sc-5hi4h5-0 jCYlzw"
-                  >
-                    <button
-                      className="cardcomponent__IconButton-sc-5hi4h5-1 fcPtdH"
-                      onClick={[Function]}
-                    >
-                      <svg
-                        fill="currentColor"
-                        height="1em"
-                        stroke="currentColor"
-                        strokeWidth="0"
-                        style={
-                          Object {
-                            "color": undefined,
-                          }
-                        }
-                        viewBox="0 0 1024 1024"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32zm-622.3-84c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9z"
-                        />
-                      </svg>
-                    </button>
-                    <button
-                      className="cardcomponent__IconButton-sc-5hi4h5-1 fcPtdH"
-                      onClick={[Function]}
-                    >
-                      <svg
-                        fill="currentColor"
-                        height="1em"
-                        stroke="currentColor"
-                        strokeWidth="0"
-                        style={
-                          Object {
-                            "color": undefined,
-                          }
-                        }
-                        viewBox="0 0 1024 1024"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"
-                        />
-                      </svg>
-                    </button>
-                  </div>
+                  </span>
                 </div>
-              </div>
-              <div
-                aria-describedby="rbd-hidden-text-0-hidden-text-0"
-                className="columncomponent__DraggableCard-sc-6j7h0r-2"
-                data-rbd-drag-handle-context-id="0"
-                data-rbd-drag-handle-draggable-id="card-2"
-                data-rbd-draggable-context-id="0"
-                data-rbd-draggable-id="card-2"
-                draggable={false}
-                onDragStart={[Function]}
-                onTransitionEnd={null}
-                role="button"
-                style={
-                  Object {
-                    "transform": null,
-                    "transition": null,
-                  }
-                }
-                tabIndex={0}
-              >
                 <div
-                  className="cardcomponent__StyledCard-sc-5hi4h5-2 hsafpV"
-                  data-testid="card"
+                  className="cardcomponent__CardActions-sc-5hi4h5-0 jCYlzw"
                 >
-                  <p>
-                     
-                    second card
-                     
-                  </p>
-                  <div
-                    className="cardcomponent__CardContent-sc-5hi4h5-3 hbNWyV"
+                  <button
+                    className="cardcomponent__IconButton-sc-5hi4h5-1 fcPtdH"
+                    onClick={[Function]}
                   >
-                    <span>
-                       
-                      second descriptions
-                       
-                    </span>
-                  </div>
-                  <div
-                    className="cardcomponent__CardActions-sc-5hi4h5-0 jCYlzw"
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 1024 1024"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32zm-622.3-84c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    className="cardcomponent__IconButton-sc-5hi4h5-1 fcPtdH"
+                    onClick={[Function]}
                   >
-                    <button
-                      className="cardcomponent__IconButton-sc-5hi4h5-1 fcPtdH"
-                      onClick={[Function]}
-                    >
-                      <svg
-                        fill="currentColor"
-                        height="1em"
-                        stroke="currentColor"
-                        strokeWidth="0"
-                        style={
-                          Object {
-                            "color": undefined,
-                          }
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        Object {
+                          "color": undefined,
                         }
-                        viewBox="0 0 1024 1024"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32zm-622.3-84c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9z"
-                        />
-                      </svg>
-                    </button>
-                    <button
-                      className="cardcomponent__IconButton-sc-5hi4h5-1 fcPtdH"
-                      onClick={[Function]}
+                      }
+                      viewBox="0 0 1024 1024"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <svg
-                        fill="currentColor"
-                        height="1em"
-                        stroke="currentColor"
-                        strokeWidth="0"
-                        style={
-                          Object {
-                            "color": undefined,
-                          }
-                        }
-                        viewBox="0 0 1024 1024"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"
-                        />
-                      </svg>
-                    </button>
-                  </div>
+                      <path
+                        d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"
+                      />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
-          data-rbd-droppable-context-id="0"
-          data-rbd-droppable-id="column-2"
-        >
-          <div
-            className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
-            data-testid="column"
-          >
             <div
-              className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
-            >
-              <p
-                className="columncomponent__ColumnName-sc-6j7h0r-5 iHrZzn"
-              >
-                 
-                To do
-                 
-              </p>
-              <button
-                className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
-                onClick={[Function]}
-              >
-                <svg
-                  fill="currentColor"
-                  height="1.5rem"
-                  stroke="currentColor"
-                  strokeWidth="0"
-                  style={
-                    Object {
-                      "color": undefined,
-                    }
-                  }
-                  viewBox="0 0 1024 1024"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
-                  />
-                  <path
-                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
+              aria-describedby="rbd-hidden-text-0-hidden-text-0"
+              className="columncomponent__DraggableCard-sc-6j7h0r-2"
+              data-rbd-drag-handle-context-id="0"
+              data-rbd-drag-handle-draggable-id="card-2"
+              data-rbd-draggable-context-id="0"
+              data-rbd-draggable-id="card-2"
+              draggable={false}
+              onDragStart={[Function]}
+              onTransitionEnd={null}
+              role="button"
+              style={
+                Object {
+                  "transform": null,
+                  "transition": null,
+                }
+              }
+              tabIndex={0}
             >
               <div
-                aria-describedby="rbd-hidden-text-0-hidden-text-0"
-                className="columncomponent__DraggableCard-sc-6j7h0r-2"
-                data-rbd-drag-handle-context-id="0"
-                data-rbd-drag-handle-draggable-id="column-2-card-1"
-                data-rbd-draggable-context-id="0"
-                data-rbd-draggable-id="column-2-card-1"
-                draggable={false}
-                onDragStart={[Function]}
-                onTransitionEnd={null}
-                role="button"
-                style={
-                  Object {
-                    "transform": null,
-                    "transition": null,
-                  }
-                }
-                tabIndex={0}
+                className="cardcomponent__StyledCard-sc-5hi4h5-2 hsafpV"
+                data-testid="card"
               >
+                <p>
+                   
+                  second card
+                   
+                </p>
                 <div
-                  className="cardcomponent__StyledCard-sc-5hi4h5-2 hsafpV"
-                  data-testid="card"
+                  className="cardcomponent__CardContent-sc-5hi4h5-3 hbNWyV"
                 >
-                  <p>
+                  <span>
                      
-                    first card
+                    second descriptions
                      
-                  </p>
-                  <div
-                    className="cardcomponent__CardContent-sc-5hi4h5-3 hbNWyV"
+                  </span>
+                </div>
+                <div
+                  className="cardcomponent__CardActions-sc-5hi4h5-0 jCYlzw"
+                >
+                  <button
+                    className="cardcomponent__IconButton-sc-5hi4h5-1 fcPtdH"
+                    onClick={[Function]}
                   >
-                    <span>
-                       
-                      first descriptions
-                       
-                    </span>
-                  </div>
-                  <div
-                    className="cardcomponent__CardActions-sc-5hi4h5-0 jCYlzw"
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 1024 1024"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32zm-622.3-84c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    className="cardcomponent__IconButton-sc-5hi4h5-1 fcPtdH"
+                    onClick={[Function]}
                   >
-                    <button
-                      className="cardcomponent__IconButton-sc-5hi4h5-1 fcPtdH"
-                      onClick={[Function]}
-                    >
-                      <svg
-                        fill="currentColor"
-                        height="1em"
-                        stroke="currentColor"
-                        strokeWidth="0"
-                        style={
-                          Object {
-                            "color": undefined,
-                          }
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        Object {
+                          "color": undefined,
                         }
-                        viewBox="0 0 1024 1024"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32zm-622.3-84c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9z"
-                        />
-                      </svg>
-                    </button>
-                    <button
-                      className="cardcomponent__IconButton-sc-5hi4h5-1 fcPtdH"
-                      onClick={[Function]}
+                      }
+                      viewBox="0 0 1024 1024"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <svg
-                        fill="currentColor"
-                        height="1em"
-                        stroke="currentColor"
-                        strokeWidth="0"
-                        style={
-                          Object {
-                            "color": undefined,
-                          }
-                        }
-                        viewBox="0 0 1024 1024"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"
-                        />
-                      </svg>
-                    </button>
-                  </div>
+                      <path
+                        d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"
+                      />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
-          data-rbd-droppable-context-id="0"
-          data-rbd-droppable-id="column-3"
-        >
-          <div
-            className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
-            data-testid="column"
-          >
-            <div
-              className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
-            >
-              <p
-                className="columncomponent__ColumnName-sc-6j7h0r-5 iHrZzn"
-              >
-                 
-                Doing
-                 
-              </p>
-              <button
-                className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
-                onClick={[Function]}
-              >
-                <svg
-                  fill="currentColor"
-                  height="1.5rem"
-                  stroke="currentColor"
-                  strokeWidth="0"
-                  style={
-                    Object {
-                      "color": undefined,
-                    }
-                  }
-                  viewBox="0 0 1024 1024"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
-                  />
-                  <path
-                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
-            />
-          </div>
-        </div>
-        <div
-          className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
-          data-rbd-droppable-context-id="0"
-          data-rbd-droppable-id="column-4"
-        >
-          <div
-            className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
-            data-testid="column"
-          >
-            <div
-              className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
-            >
-              <p
-                className="columncomponent__ColumnName-sc-6j7h0r-5 iHrZzn"
-              >
-                 
-                Testing
-                 
-              </p>
-              <button
-                className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
-                onClick={[Function]}
-              >
-                <svg
-                  fill="currentColor"
-                  height="1.5rem"
-                  stroke="currentColor"
-                  strokeWidth="0"
-                  style={
-                    Object {
-                      "color": undefined,
-                    }
-                  }
-                  viewBox="0 0 1024 1024"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
-                  />
-                  <path
-                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
-            />
-          </div>
-        </div>
-        <div
-          className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
-          data-rbd-droppable-context-id="0"
-          data-rbd-droppable-id="column-5"
-        >
-          <div
-            className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
-            data-testid="column"
-          >
-            <div
-              className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
-            >
-              <p
-                className="columncomponent__ColumnName-sc-6j7h0r-5 iHrZzn"
-              >
-                 
-                Done
-                 
-              </p>
-              <button
-                className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
-                onClick={[Function]}
-              >
-                <svg
-                  fill="currentColor"
-                  height="1.5rem"
-                  stroke="currentColor"
-                  strokeWidth="0"
-                  style={
-                    Object {
-                      "color": undefined,
-                    }
-                  }
-                  viewBox="0 0 1024 1024"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
-                  />
-                  <path
-                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
-            />
           </div>
         </div>
       </div>
+      <div
+        className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
+        data-rbd-droppable-context-id="0"
+        data-rbd-droppable-id="column-2"
+      >
+        <div
+          className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
+          data-testid="column"
+        >
+          <div
+            className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
+          >
+            <p
+              className="columncomponent__ColumnName-sc-6j7h0r-5 iHrZzn"
+            >
+               
+              To do
+               
+            </p>
+            <button
+              className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
+              onClick={[Function]}
+            >
+              <svg
+                fill="currentColor"
+                height="1.5rem"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 1024 1024"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
+                />
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
+          >
+            <div
+              aria-describedby="rbd-hidden-text-0-hidden-text-0"
+              className="columncomponent__DraggableCard-sc-6j7h0r-2"
+              data-rbd-drag-handle-context-id="0"
+              data-rbd-drag-handle-draggable-id="column-2-card-1"
+              data-rbd-draggable-context-id="0"
+              data-rbd-draggable-id="column-2-card-1"
+              draggable={false}
+              onDragStart={[Function]}
+              onTransitionEnd={null}
+              role="button"
+              style={
+                Object {
+                  "transform": null,
+                  "transition": null,
+                }
+              }
+              tabIndex={0}
+            >
+              <div
+                className="cardcomponent__StyledCard-sc-5hi4h5-2 hsafpV"
+                data-testid="card"
+              >
+                <p>
+                   
+                  first card
+                   
+                </p>
+                <div
+                  className="cardcomponent__CardContent-sc-5hi4h5-3 hbNWyV"
+                >
+                  <span>
+                     
+                    first descriptions
+                     
+                  </span>
+                </div>
+                <div
+                  className="cardcomponent__CardActions-sc-5hi4h5-0 jCYlzw"
+                >
+                  <button
+                    className="cardcomponent__IconButton-sc-5hi4h5-1 fcPtdH"
+                    onClick={[Function]}
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 1024 1024"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32zm-622.3-84c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    className="cardcomponent__IconButton-sc-5hi4h5-1 fcPtdH"
+                    onClick={[Function]}
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 1024 1024"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
+        data-rbd-droppable-context-id="0"
+        data-rbd-droppable-id="column-3"
+      >
+        <div
+          className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
+          data-testid="column"
+        >
+          <div
+            className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
+          >
+            <p
+              className="columncomponent__ColumnName-sc-6j7h0r-5 iHrZzn"
+            >
+               
+              Doing
+               
+            </p>
+            <button
+              className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
+              onClick={[Function]}
+            >
+              <svg
+                fill="currentColor"
+                height="1.5rem"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 1024 1024"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
+                />
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
+          />
+        </div>
+      </div>
+      <div
+        className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
+        data-rbd-droppable-context-id="0"
+        data-rbd-droppable-id="column-4"
+      >
+        <div
+          className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
+          data-testid="column"
+        >
+          <div
+            className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
+          >
+            <p
+              className="columncomponent__ColumnName-sc-6j7h0r-5 iHrZzn"
+            >
+               
+              Testing
+               
+            </p>
+            <button
+              className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
+              onClick={[Function]}
+            >
+              <svg
+                fill="currentColor"
+                height="1.5rem"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 1024 1024"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
+                />
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
+          />
+        </div>
+      </div>
+      <div
+        className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
+        data-rbd-droppable-context-id="0"
+        data-rbd-droppable-id="column-5"
+      >
+        <div
+          className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
+          data-testid="column"
+        >
+          <div
+            className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
+          >
+            <p
+              className="columncomponent__ColumnName-sc-6j7h0r-5 iHrZzn"
+            >
+               
+              Done
+               
+            </p>
+            <button
+              className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
+              onClick={[Function]}
+            >
+              <svg
+                fill="currentColor"
+                height="1.5rem"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 1024 1024"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
+                />
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
+          />
+        </div>
+      </div>
     </div>
-     
   </div>
 </main>
 `;

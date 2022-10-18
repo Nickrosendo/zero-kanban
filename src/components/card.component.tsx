@@ -14,7 +14,7 @@ export interface CardProps {
 
 export const Card: React.FC<CardProps> = ({
   card = {},
-  edit,
+  edit = () => null,
   remove = () => null,
   columnIndex,
   cardIndex,
