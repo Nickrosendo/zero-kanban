@@ -10,37 +10,40 @@ import { defaultBoards } from "@root/data";
 
 export interface BoardProps {}
 
+export interface ColumnFilter {
+  id: string;
+  name: string;
+  value: boolean;
+}
+
 export const Board: React.FC<BoardProps> = () => {
   const board = defaultBoards[0];
   const [columns, setColumns] = useState<ColumnType[]>(board?.columns ?? []);
 
-  const defaultColumnFilters = [
-    ...columns.map((c) => ({ id: c.id, name: c.name, value: true })),
-    { id: "all", name: "All", value: true },
-  ];
   const [filteredColumns, setFilteredColumns] = useState<ColumnType[]>(columns);
   const [isFilterDropdownOpen, setFilterDropdownOpen] =
     useState<boolean>(false);
   const [searchText, setSearchText] = useState<string>("");
-  const [columnFilters, setColumnFilters] =
-    useState<Record<string, string | boolean>[]>(defaultColumnFilters);
-  const [selectedFilters, setSelectedFilters] = useState<
-    Record<string, boolean>
-  >({
-    all: true,
+  const [filters, setFilters] = useState<any>({
+    backlog: { id: "backlog", name: "Backlog", value: true },
+    todo: { id: "todo", name: "To do", value: true },
+    doing: { id: "doing", name: "Doing", value: true },
+    testing: { id: "testing", name: "Testing", value: true },
+    done: { id: "done", name: "Done", value: true },
   });
 
   useEffect(() => {
-    console.log("useEffect: ", selectedFilters);
-    if (selectedFilters?.all) {
-      setFilteredColumns(columns);
-    } else {
-      const selectedColumns = columns.filter((c) =>
-        Object.keys(selectedFilters).includes(c.id)
-      );
-      setFilteredColumns(selectedColumns);
-    }
-  }, [selectedFilters]);
+    console.log("useEffect: ", filters);
+    const enabledFilters = Object.values(filters)
+      .filter((f) => f.value)
+      .map((f) => f.id);
+    console.log("enabledFilters: ", enabledFilters);
+    const selectedColumns = columns.filter((c) =>
+      enabledFilters.includes(c.id)
+    );
+    setFilteredColumns(selectedColumns);
+    setSearchText("");
+  }, [filters]);
 
   const handleAddCard = useCallback(
     (columnIndex: number) => {
@@ -130,22 +133,12 @@ export const Board: React.FC<BoardProps> = () => {
     [searchText, columns]
   );
 
-  const handleFilterColumns = useCallback(
+  const handleChangeFilter = useCallback(
     (evt: any) => {
-      const { value, checked } = evt.target;
-      if (checked) {
-        const filters = { ...selectedFilters, [value as string]: true };
-        if (value != "all") {
-          delete filters.all;
-        }
-
-        setSelectedFilters(filters);
-      } else {
-        const filters = { ...selectedFilters };
-        delete filters[value];
-        setSelectedFilters(filters);
-      }
-      console.log("value: ", value);
+      const { checked, id } = evt.target;
+      const updatedFilters = { ...filters };
+      updatedFilters[id] = { ...updatedFilters[id], value: checked };
+      setFilters(updatedFilters);
     },
     [columns, filteredColumns]
   );
@@ -163,17 +156,16 @@ export const Board: React.FC<BoardProps> = () => {
             <FilterDropdownContainer>
               <p> Filter which columns will show </p>
               <FilterListContainer>
-                {columnFilters.map((cf) => (
-                  <FilterItemContainer key={cf.name}>
+                {Object.values(filters)?.map((f) => (
+                  <FilterItemContainer key={f.id}>
                     <CheckboxInput
                       type="checkbox"
-                      checked={cf.checked}
-                      name="column"
-                      value={cf.id}
-                      id="column"
-                      onChange={handleFilterColumns}
+                      checked={f.value}
+                      name={f.name}
+                      id={f.id}
+                      onChange={handleChangeFilter}
                     />
-                    <Label htmlFor="column">{cf.name}</Label>
+                    <Label htmlFor="column">{f.name}</Label>
                   </FilterItemContainer>
                 ))}
               </FilterListContainer>
@@ -223,7 +215,6 @@ const StyledBoard = styled.div`
   align-items: flex-start;
   width: 100vw;
   flex: 1;
-  overflow: auto;
 `;
 
 const ColumnsContainer = styled.div`

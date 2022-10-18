@@ -2,7 +2,7 @@
 
 exports[`should render homepage matching snapshot 1`] = `
 <main
-  className="pages__StyledMain-sc-106jlst-0 EysTc"
+  className="pages__StyledMain-sc-106jlst-0 hQHdZO"
 >
   <div
     className="logocomponent__StyledLogo-sc-8hsg5f-0 fKGdxL"
@@ -39,7 +39,7 @@ exports[`should render homepage matching snapshot 1`] = `
     </p>
   </div>
   <div
-    className="boardcomponent__StyledBoard-sc-kxdno6-0 fcURYs"
+    className="boardcomponent__StyledBoard-sc-kxdno6-0 gQlgEG"
     data-testid="board"
   >
     <h1>
@@ -91,7 +91,7 @@ exports[`should render homepage matching snapshot 1`] = `
       <div
         className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
         data-rbd-droppable-context-id="0"
-        data-rbd-droppable-id="column-1"
+        data-rbd-droppable-id="backlog"
       >
         <div
           className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
@@ -321,7 +321,7 @@ exports[`should render homepage matching snapshot 1`] = `
       <div
         className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
         data-rbd-droppable-context-id="0"
-        data-rbd-droppable-id="column-2"
+        data-rbd-droppable-id="todo"
       >
         <div
           className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
@@ -462,7 +462,7 @@ exports[`should render homepage matching snapshot 1`] = `
       <div
         className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
         data-rbd-droppable-context-id="0"
-        data-rbd-droppable-id="column-3"
+        data-rbd-droppable-id="doing"
       >
         <div
           className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
@@ -513,7 +513,7 @@ exports[`should render homepage matching snapshot 1`] = `
       <div
         className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
         data-rbd-droppable-context-id="0"
-        data-rbd-droppable-id="column-4"
+        data-rbd-droppable-id="testing"
       >
         <div
           className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
@@ -564,7 +564,7 @@ exports[`should render homepage matching snapshot 1`] = `
       <div
         className="boardcomponent__ColumnContainer-sc-kxdno6-2 eBiCLF"
         data-rbd-droppable-context-id="0"
-        data-rbd-droppable-id="column-5"
+        data-rbd-droppable-id="done"
       >
         <div
           className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"

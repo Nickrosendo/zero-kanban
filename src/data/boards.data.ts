@@ -6,7 +6,7 @@ export const defaultBoards: BoardType[] = [
     name: "My first board",
     columns: [
       {
-        id: "column-1",
+        id: "backlog",
         name: "Backlog",
         cards: [
           {
@@ -24,7 +24,7 @@ export const defaultBoards: BoardType[] = [
         ],
       },
       {
-        id: "column-2",
+        id: "todo",
         name: "To do",
         cards: [
           {
@@ -36,17 +36,17 @@ export const defaultBoards: BoardType[] = [
         ],
       },
       {
-        id: "column-3",
+        id: "doing",
         name: "Doing",
         cards: [],
       },
       {
-        id: "column-4",
+        id: "testing",
         name: "Testing",
         cards: [],
       },
       {
-        id: "column-5",
+        id: "done",
         name: "Done",
         cards: [],
       },
