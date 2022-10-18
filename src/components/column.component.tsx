@@ -8,29 +8,42 @@ import { Card } from "./card.component";
 
 export interface ColumnProps {
   column: ColumnType;
+  addCard: (columnIndex: number) => void;
+  editCard: (data: any) => void;
+  removeCard: (columnIndex: number, cardIndex: number) => void;
+  columnIndex: number;
 }
-
-export const Column: React.FC<ColumnProps> = ({ column }) => {
-  const handleAddCard = useCallback(() => {}, []);
-
+export const Column: React.FC<ColumnProps> = ({
+  column,
+  addCard,
+  columnIndex,
+  removeCard = () => null,
+  editCard = () => null,
+}) => {
   return (
     <StyledColumn data-testid="column">
       <ColumnHeader>
         <ColumnName> {column?.name} </ColumnName>
-        <AddCardButton onClick={handleAddCard}>
+        <AddCardButton onClick={() => addCard(columnIndex)}>
           <AiOutlinePlusCircle size={"1.5rem"} />
         </AddCardButton>
       </ColumnHeader>
       <CardsContainer>
-        {column?.cards.map((card, index) => (
-          <Draggable draggableId={card.id} index={index} key={card.id}>
+        {column?.cards.map((card, cardIndex) => (
+          <Draggable draggableId={card.id} index={cardIndex} key={card.id}>
             {(draggableProvider) => (
               <DraggableCard
                 {...draggableProvider.draggableProps}
                 {...draggableProvider.dragHandleProps}
                 ref={draggableProvider.innerRef}
               >
-                <Card card={card} />
+                <Card
+                  card={card}
+                  remove={removeCard}
+                  columnIndex={columnIndex}
+                  cardIndex={cardIndex}
+                  edit={editCard}
+                />
               </DraggableCard>
             )}
           </Draggable>

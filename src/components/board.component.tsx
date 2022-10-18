@@ -1,21 +1,49 @@
 import React, { useCallback, useState } from "react";
 import styled from "styled-components";
-import {
-  DragDropContext,
-  Droppable,
-  Draggable,
-  DropResult,
-} from "react-beautiful-dnd";
+import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
 
-import { BoardType, ColumnType } from "@root/types";
+import { ColumnType } from "@root/types";
 import { Column } from "./column.component";
+import { objectId } from "@root/helpers";
+import { defaultBoards } from "@root/data";
 
-export interface BoardProps {
-  board: BoardType;
-}
+export interface BoardProps {}
 
-export const Board: React.FC<BoardProps> = ({ board }) => {
+export const Board: React.FC<BoardProps> = () => {
+  const board = defaultBoards[0];
   const [columns, setColumns] = useState<ColumnType[]>(board?.columns ?? []);
+  const handleAddCard = useCallback(
+    (columnIndex: number) => {
+      const updatedColumns = [...columns];
+      updatedColumns[columnIndex].cards.push({
+        id: objectId(),
+        name: "empty card",
+        description: "empty",
+        status: 1,
+      });
+      setColumns(updatedColumns);
+    },
+    [columns]
+  );
+
+  const handleRemoveCard = useCallback(
+    (columnIndex: number, cardIndex: number) => {
+      const updatedColumns = [...columns];
+      updatedColumns[columnIndex].cards.splice(cardIndex, 1);
+      setColumns(updatedColumns);
+    },
+    [columns]
+  );
+
+  const handleEditCard = useCallback(
+    (data: any) => {
+      const { cardIndex, columnIndex, card } = data;
+      const updatedColumns = [...columns];
+      updatedColumns[columnIndex].cards[cardIndex] = { ...card };
+      setColumns(updatedColumns);
+    },
+    [columns]
+  );
 
   const onDragEnd = useCallback(
     (result: DropResult) => {
@@ -56,14 +84,20 @@ export const Board: React.FC<BoardProps> = ({ board }) => {
         <h1> {board?.name} </h1>
 
         <ColumnsContainer>
-          {columns?.map((column) => (
+          {columns?.map((column, index) => (
             <Droppable droppableId={column.id} key={column.id}>
               {(provided) => (
                 <ColumnContainer
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >
-                  <Column column={column} />
+                  <Column
+                    column={column}
+                    addCard={handleAddCard}
+                    removeCard={handleRemoveCard}
+                    columnIndex={index}
+                    editCard={handleEditCard}
+                  />
                   {provided.placeholder}
                 </ColumnContainer>
               )}

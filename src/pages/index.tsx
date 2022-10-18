@@ -1,23 +1,17 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
 
-import { BoardsList, Logo, Container } from "@root/components";
-import { BoardType } from "@root/types";
-import { defaultBoards } from "@root/data";
+import { Board, Logo } from "@root/components";
 
 export interface HomeProps {
   cookies?: string;
 }
 
 const Home: NextPage<HomeProps> = () => {
-  const myBoards: BoardType[] = defaultBoards;
-
   return (
     <StyledMain>
-      <Container>
-        <Logo />
-        <BoardsList boards={myBoards} />
-      </Container>
+      <Logo />
+      <Board />
     </StyledMain>
   );
 };
@@ -26,7 +20,6 @@ export default Home;
 
 const StyledMain = styled.main`
   background: ${(props) => props.theme.bg};
-  padding: 1rem;
   overflow: hidden;
   position: relative;
   top: 0;
