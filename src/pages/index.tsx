@@ -3,11 +3,7 @@ import type { NextPage } from "next";
 
 import { Board, Logo } from "@root/components";
 
-export interface HomeProps {
-  cookies?: string;
-}
-
-const Home: NextPage<HomeProps> = () => {
+const Home: NextPage = () => {
   return (
     <StyledMain>
       <Logo />

@@ -2,11 +2,11 @@ import React, { useCallback, useEffect } from "react";
 import styled from "styled-components";
 import { AiFillEdit, AiFillDelete, AiOutlineCheck } from "react-icons/ai";
 
-import { CardType } from "@root/types";
+import { CardType, EditCardData } from "@root/types";
 
 export interface CardProps {
   card: CardType;
-  edit: (data: any) => void;
+  edit: (data: EditCardData) => void;
   remove: (columnIndex: number, cardIndex: number) => void;
   cardIndex: number;
   columnIndex: number;
@@ -19,16 +19,22 @@ export const Card: React.FC<CardProps> = ({
   columnIndex,
   cardIndex,
 }) => {
-  const [name, setName] = React.useState(card.name);
-  const [description, setDescription] = React.useState(card.description);
-  const [editing, setEditing] = React.useState(false);
+  const [name, setName] = React.useState<string>(card?.name ?? "");
+  const [description, setDescription] = React.useState<string>(
+    card?.description ?? ""
+  );
+  const [editing, setEditing] = React.useState<boolean>(false);
 
   useEffect(() => {
     handleCommitEdition();
   }, [name, description, editing]);
 
   const handleCommitEdition = useCallback(() => {
-    edit({ cardIndex, columnIndex, card: { id: card.id, name, description } });
+    edit({
+      cardIndex,
+      columnIndex,
+      card: { id: card?.id ?? "", name, description },
+    });
   }, [name, description, editing]);
 
   return (

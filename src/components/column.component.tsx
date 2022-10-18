@@ -1,18 +1,19 @@
-import React, { useCallback } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Draggable } from "react-beautiful-dnd";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 
-import { ColumnType } from "@root/types";
+import { ColumnType, EditCardData } from "@root/types";
 import { Card } from "./card.component";
 
 export interface ColumnProps {
   column: ColumnType;
   addCard: (columnIndex: number) => void;
-  editCard: (data: any) => void;
+  editCard: (data: EditCardData) => void;
   removeCard: (columnIndex: number, cardIndex: number) => void;
   columnIndex: number;
 }
+
 export const Column: React.FC<ColumnProps> = ({
   column,
   addCard,
@@ -20,11 +21,15 @@ export const Column: React.FC<ColumnProps> = ({
   removeCard = () => null,
   editCard = () => null,
 }) => {
+  const handleAddCard = () => {
+    addCard(columnIndex);
+  };
+
   return (
     <StyledColumn data-testid="column">
       <ColumnHeader>
         <ColumnName> {column?.name} </ColumnName>
-        <AddCardButton onClick={() => addCard(columnIndex)}>
+        <AddCardButton onClick={handleAddCard}>
           <AiOutlinePlusCircle size={"1.5rem"} />
         </AddCardButton>
       </ColumnHeader>

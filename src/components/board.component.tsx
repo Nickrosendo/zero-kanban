@@ -3,18 +3,10 @@ import styled from "styled-components";
 import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
 import { MdOutlineFilterList } from "react-icons/md";
 
-import { ColumnType } from "@root/types";
-import { Column } from "./column.component";
+import { ColumnType, EditCardData } from "@root/types";
 import { objectId } from "@root/helpers";
-import { defaultBoards } from "@root/data";
-
-export interface BoardProps {}
-
-export interface ColumnFilter {
-  id: string;
-  name: string;
-  value: boolean;
-}
+import { boardData } from "@root/data";
+import { Column } from "./column.component";
 
 export interface FilterItem {
   id: string;
@@ -24,10 +16,10 @@ export interface FilterItem {
 
 export type BoardFilters = Record<string, FilterItem>;
 
-export const Board: React.FC<BoardProps> = () => {
-  const board = defaultBoards[0];
-  const [columns, setColumns] = useState<ColumnType[]>(board?.columns ?? []);
-
+export const Board: React.FC = () => {
+  const [columns, setColumns] = useState<ColumnType[]>(
+    boardData?.columns ?? []
+  );
   const [filteredColumns, setFilteredColumns] = useState<ColumnType[]>(columns);
   const [isFilterDropdownOpen, setFilterDropdownOpen] =
     useState<boolean>(false);
@@ -49,7 +41,7 @@ export const Board: React.FC<BoardProps> = () => {
     );
     setFilteredColumns(selectedColumns);
     setSearchText("");
-  }, [filters]);
+  }, [filters, columns]);
 
   const handleAddCard = useCallback(
     (columnIndex: number) => {
@@ -58,7 +50,6 @@ export const Board: React.FC<BoardProps> = () => {
         id: objectId(),
         name: "empty card",
         description: "empty",
-        status: 1,
       });
       setColumns(updatedColumns);
     },
@@ -75,7 +66,7 @@ export const Board: React.FC<BoardProps> = () => {
   );
 
   const handleEditCard = useCallback(
-    (data: any) => {
+    (data: EditCardData) => {
       const { cardIndex, columnIndex, card } = data;
       const updatedColumns = [...columns];
       updatedColumns[columnIndex].cards[cardIndex] = { ...card };
@@ -136,7 +127,7 @@ export const Board: React.FC<BoardProps> = () => {
         setFilteredColumns(columns);
       }
     },
-    [searchText, columns]
+    [columns]
   );
 
   const handleChangeFilter = useCallback(
@@ -152,7 +143,7 @@ export const Board: React.FC<BoardProps> = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <StyledBoard data-testid="board">
-        <h1> {board?.name} </h1>
+        <h1> {boardData?.name} </h1>
 
         <BoardActionContainer>
           <IconButton onClick={toggleFilterDropdown}>
@@ -201,7 +192,8 @@ export const Board: React.FC<BoardProps> = () => {
                     columnIndex={index}
                     editCard={handleEditCard}
                   />
-                  {provided.placeholder}
+
+                  <div style={{ display: "none" }}>{provided.placeholder}</div>
                 </ColumnContainer>
               )}
             </Droppable>
@@ -252,7 +244,7 @@ const IconButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${(props) => props.theme.fg} !important;
+  color: ${(props) => props.theme.fg};
   cursor: pointer;
 
   &:hover {

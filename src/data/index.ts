@@ -1,1 +1,1 @@
-export * from "./boards.data";
+export * from "./board.data";
