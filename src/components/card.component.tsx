@@ -35,13 +35,13 @@ export const Card: React.FC<CardProps> = ({
     <StyledCard data-testid="card">
       {editing ? (
         <>
-          <input
+          <CardInput
             type="text"
             onChange={(evt) => setName(evt?.target?.value)}
             value={name}
           />
           <CardContent>
-            <input
+            <CardInput
               type="text"
               onChange={(evt) => setDescription(evt?.target?.value)}
               value={description}
@@ -117,4 +117,14 @@ const CardContent = styled.div`
   background: #eee;
   padding: 0.5rem;
   border-radius: 0.5rem;
+`;
+
+const CardInput = styled.input`
+  border-radius: 8px;
+  color: ${(props) => props.theme.fg};
+  border: 1px solid ${(props) => props.theme.fg};
+  background: transparent;
+  outline: 0;
+  padding: 0.5rem;
+  width: 100%;
 `;

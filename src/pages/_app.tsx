@@ -1,6 +1,8 @@
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import type { AppProps } from "next/app";
 
+import { theme } from "@root/themes";
+
 const GlobalStyle = createGlobalStyle`
   * {
     font-family: "Lato", "sans-serif"; 
@@ -8,11 +10,6 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const theme = {
-    fg: "#be4d25",
-    bg: "#fff",
-  };
-
   return (
     <>
       <GlobalStyle />
