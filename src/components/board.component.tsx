@@ -33,11 +33,9 @@ export const Board: React.FC<BoardProps> = () => {
   });
 
   useEffect(() => {
-    console.log("useEffect: ", filters);
     const enabledFilters = Object.values(filters)
       .filter((f) => f.value)
       .map((f) => f.id);
-    console.log("enabledFilters: ", enabledFilters);
     const selectedColumns = columns.filter((c) =>
       enabledFilters.includes(c.id)
     );
