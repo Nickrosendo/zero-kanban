@@ -52,7 +52,12 @@ The project uses `Next.js` react framework with `typescript`;
 
 ## Getting started
 
-First, run the development server:
+First, install the project dependencies with `yarn`:
+```bash
+yarn install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
