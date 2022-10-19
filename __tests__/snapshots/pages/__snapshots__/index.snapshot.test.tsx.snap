@@ -39,7 +39,7 @@ exports[`should render homepage matching snapshot 1`] = `
     </p>
   </div>
   <div
-    className="boardcomponent__StyledBoard-sc-kxdno6-0 ldhxmI"
+    className="boardcomponent__StyledBoard-sc-kxdno6-0 jmmEmj"
     data-testid="board"
   >
     <h1>
