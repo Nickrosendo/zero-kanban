@@ -37,6 +37,18 @@ export const Card: React.FC<CardProps> = ({
     });
   }, [name, description, editing]);
 
+  const toggleEditing = useCallback(() => setEditing(!editing), [editing]);
+
+  const handleKeyPress = useCallback(
+    (evt: any) => {
+      if (evt.key === "Enter") {
+        toggleEditing();
+        handleCommitEdition();
+      }
+    },
+    [name, description, editing]
+  );
+
   return (
     <StyledCard data-testid="card">
       {editing ? (
@@ -44,12 +56,14 @@ export const Card: React.FC<CardProps> = ({
           <CardInput
             type="text"
             onChange={(evt) => setName(evt?.target?.value)}
+            onKeyPress={handleKeyPress}
             value={name}
           />
           <CardContent>
             <CardInput
               type="text"
               onChange={(evt) => setDescription(evt?.target?.value)}
+              onKeyPress={handleKeyPress}
               value={description}
             />
           </CardContent>
@@ -64,7 +78,7 @@ export const Card: React.FC<CardProps> = ({
       )}
 
       <CardActions>
-        <IconButton onClick={() => setEditing(!editing)}>
+        <IconButton onClick={toggleEditing}>
           {editing ? <AiOutlineCheck /> : <AiFillEdit />}
         </IconButton>
         <IconButton onClick={() => remove(columnIndex, cardIndex)}>
@@ -120,7 +134,7 @@ const CardContent = styled.div`
   justify-content: flex-start;
   gap: 1rem;
   width: 100%;
-  background: #eee;
+  background: #ddd;
   padding: 0.5rem;
   border-radius: 0.5rem;
 `;

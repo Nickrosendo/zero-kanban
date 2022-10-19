@@ -155,14 +155,16 @@ export const Board: React.FC = () => {
               <FilterListContainer>
                 {Object.values(filters)?.map((f) => (
                   <FilterItemContainer key={f.id}>
-                    <CheckboxInput
-                      type="checkbox"
-                      checked={f.value}
-                      name={f.name}
-                      id={f.id}
-                      onChange={handleChangeFilter}
-                    />
-                    <Label htmlFor="column">{f.name}</Label>
+                    <Label>
+                      <CheckboxInput
+                        type="checkbox"
+                        checked={f.value}
+                        name={f.name}
+                        id={f.id}
+                        onChange={handleChangeFilter}
+                      />
+                      {f.name}
+                    </Label>
                   </FilterItemContainer>
                 ))}
               </FilterListContainer>
@@ -207,12 +209,12 @@ export const Board: React.FC = () => {
 const StyledBoard = styled.div`
   padding: 1rem 2rem;
   color: ${(props) => props.theme.fg};
-  background: #eee;
+  background: ${(props) => props.theme.bg};
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100vw;
   flex: 1;
+  width: 100vw;
 `;
 
 const ColumnsContainer = styled.div`
@@ -257,7 +259,7 @@ export const SearchCardsInput = styled.input`
   border-radius: 8px;
   border: 1px solid ${(props) => props.theme.fg};
   color: ${(props) => props.theme.fg};
-  background: transparent;
+  background: #fff;
   outline: 0;
   padding: 0.5rem;
   width: 100%;
@@ -302,4 +304,5 @@ export const FilterItemContainer = styled.div`
 
 export const Label = styled.label`
   font-size: 1rem;
+  cursor: pointer;
 `;

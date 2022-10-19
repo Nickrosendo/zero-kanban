@@ -39,7 +39,7 @@ exports[`should render homepage matching snapshot 1`] = `
     </p>
   </div>
   <div
-    className="boardcomponent__StyledBoard-sc-kxdno6-0 gQlgEG"
+    className="boardcomponent__StyledBoard-sc-kxdno6-0 ldhxmI"
     data-testid="board"
   >
     <h1>
@@ -78,7 +78,7 @@ exports[`should render homepage matching snapshot 1`] = `
         </svg>
       </button>
       <input
-        className="boardcomponent__SearchCardsInput-sc-kxdno6-5 mlghi"
+        className="boardcomponent__SearchCardsInput-sc-kxdno6-5 chbqnZ"
         onChange={[Function]}
         placeholder="Search cards by name"
         type="text"
