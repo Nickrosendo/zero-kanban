@@ -15,9 +15,9 @@ export interface ColumnProps {
 }
 
 export const Column: React.FC<ColumnProps> = ({
-  column,
-  addCard,
-  columnIndex,
+  column = {},
+  addCard = () => null,
+  columnIndex = 0,
   removeCard = () => null,
   editCard = () => null,
 }) => {
@@ -26,21 +26,22 @@ export const Column: React.FC<ColumnProps> = ({
   };
 
   return (
-    <StyledColumn data-testid="column">
+    <StyledColumn>
       <ColumnHeader>
         <ColumnName> {column?.name} </ColumnName>
-        <AddCardButton onClick={handleAddCard}>
+        <AddCardButton onClick={handleAddCard} data-testid="add-card">
           <AiOutlinePlusCircle size={"1.5rem"} />
         </AddCardButton>
       </ColumnHeader>
-      <CardsContainer>
-        {column?.cards.map((card, cardIndex) => (
+      <CardsContainer data-testid={`column-${column.id}`}>
+        {column?.cards?.map?.((card, cardIndex) => (
           <Draggable draggableId={card.id} index={cardIndex} key={card.id}>
             {(draggableProvider) => (
               <DraggableCard
                 {...draggableProvider.draggableProps}
                 {...draggableProvider.dragHandleProps}
                 ref={draggableProvider.innerRef}
+                data-testid="drag-card"
               >
                 <Card
                   card={card}

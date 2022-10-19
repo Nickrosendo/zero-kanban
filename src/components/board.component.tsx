@@ -146,7 +146,7 @@ export const Board: React.FC = () => {
         <h1> {boardData?.name} </h1>
 
         <BoardActionContainer>
-          <IconButton onClick={toggleFilterDropdown}>
+          <IconButton onClick={toggleFilterDropdown} data-testid="filter-cards">
             <MdOutlineFilterList size={"1.5rem"} />
           </IconButton>
           {isFilterDropdownOpen && (
@@ -155,7 +155,7 @@ export const Board: React.FC = () => {
               <FilterListContainer>
                 {Object.values(filters)?.map((f) => (
                   <FilterItemContainer key={f.id}>
-                    <Label>
+                    <Label data-testid="select-filter-item">
                       <CheckboxInput
                         type="checkbox"
                         checked={f.value}
@@ -172,6 +172,7 @@ export const Board: React.FC = () => {
           )}
 
           <SearchCardsInput
+            data-testid="search-cards"
             type="text"
             placeholder="Search cards by name"
             onChange={handleSearchCards}

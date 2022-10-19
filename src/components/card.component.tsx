@@ -49,11 +49,16 @@ export const Card: React.FC<CardProps> = ({
     [name, description, editing]
   );
 
+  const handleRemove = useCallback(() => {
+    remove(columnIndex, cardIndex);
+  }, [columnIndex, cardIndex]);
+
   return (
     <StyledCard data-testid="card">
       {editing ? (
         <>
           <CardInput
+            data-testid="edit-card-name"
             type="text"
             onChange={(evt) => setName(evt?.target?.value)}
             onKeyPress={handleKeyPress}
@@ -61,6 +66,7 @@ export const Card: React.FC<CardProps> = ({
           />
           <CardContent>
             <CardInput
+              data-testid="edit-card-description"
               type="text"
               onChange={(evt) => setDescription(evt?.target?.value)}
               onKeyPress={handleKeyPress}
@@ -70,19 +76,23 @@ export const Card: React.FC<CardProps> = ({
         </>
       ) : (
         <>
-          <p> {name} </p>
+          <p data-testid="card-name"> {name} </p>
           <CardContent>
-            <span> {description} </span>
+            <span data-testid="card-description"> {description} </span>
           </CardContent>
         </>
       )}
 
       <CardActions>
-        <IconButton onClick={toggleEditing}>
-          {editing ? <AiOutlineCheck /> : <AiFillEdit />}
+        <IconButton onClick={toggleEditing} data-testid="edit-card">
+          {editing ? (
+            <AiOutlineCheck data-testid="confirm-card-edit-icon" />
+          ) : (
+            <AiFillEdit data-testid="start-card-edit-icon" />
+          )}
         </IconButton>
-        <IconButton onClick={() => remove(columnIndex, cardIndex)}>
-          <AiFillDelete />
+        <IconButton onClick={handleRemove} data-testid="remove-card">
+          <AiFillDelete data-testid="remove-card-icon" />
         </IconButton>
       </CardActions>
     </StyledCard>

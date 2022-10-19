@@ -52,6 +52,7 @@ exports[`should render homepage matching snapshot 1`] = `
     >
       <button
         className="boardcomponent__IconButton-sc-kxdno6-4 dLTvke"
+        data-testid="filter-cards"
         onClick={[Function]}
       >
         <svg
@@ -79,6 +80,7 @@ exports[`should render homepage matching snapshot 1`] = `
       </button>
       <input
         className="boardcomponent__SearchCardsInput-sc-kxdno6-5 chbqnZ"
+        data-testid="search-cards"
         onChange={[Function]}
         placeholder="Search cards by name"
         type="text"
@@ -95,7 +97,6 @@ exports[`should render homepage matching snapshot 1`] = `
       >
         <div
           className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
-          data-testid="column"
         >
           <div
             className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
@@ -109,6 +110,7 @@ exports[`should render homepage matching snapshot 1`] = `
             </p>
             <button
               className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
+              data-testid="add-card"
               onClick={[Function]}
             >
               <svg
@@ -136,6 +138,7 @@ exports[`should render homepage matching snapshot 1`] = `
           </div>
           <div
             className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
+            data-testid="column-backlog"
           />
         </div>
         <div
@@ -153,7 +156,6 @@ exports[`should render homepage matching snapshot 1`] = `
       >
         <div
           className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
-          data-testid="column"
         >
           <div
             className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
@@ -167,6 +169,7 @@ exports[`should render homepage matching snapshot 1`] = `
             </p>
             <button
               className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
+              data-testid="add-card"
               onClick={[Function]}
             >
               <svg
@@ -194,6 +197,7 @@ exports[`should render homepage matching snapshot 1`] = `
           </div>
           <div
             className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
+            data-testid="column-todo"
           />
         </div>
         <div
@@ -211,7 +215,6 @@ exports[`should render homepage matching snapshot 1`] = `
       >
         <div
           className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
-          data-testid="column"
         >
           <div
             className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
@@ -225,6 +228,7 @@ exports[`should render homepage matching snapshot 1`] = `
             </p>
             <button
               className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
+              data-testid="add-card"
               onClick={[Function]}
             >
               <svg
@@ -252,6 +256,7 @@ exports[`should render homepage matching snapshot 1`] = `
           </div>
           <div
             className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
+            data-testid="column-doing"
           />
         </div>
         <div
@@ -269,7 +274,6 @@ exports[`should render homepage matching snapshot 1`] = `
       >
         <div
           className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
-          data-testid="column"
         >
           <div
             className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
@@ -283,6 +287,7 @@ exports[`should render homepage matching snapshot 1`] = `
             </p>
             <button
               className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
+              data-testid="add-card"
               onClick={[Function]}
             >
               <svg
@@ -310,6 +315,7 @@ exports[`should render homepage matching snapshot 1`] = `
           </div>
           <div
             className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
+            data-testid="column-testing"
           />
         </div>
         <div
@@ -327,7 +333,6 @@ exports[`should render homepage matching snapshot 1`] = `
       >
         <div
           className="columncomponent__StyledColumn-sc-6j7h0r-0 brhrfM"
-          data-testid="column"
         >
           <div
             className="columncomponent__ColumnHeader-sc-6j7h0r-3 dltPLn"
@@ -341,6 +346,7 @@ exports[`should render homepage matching snapshot 1`] = `
             </p>
             <button
               className="columncomponent__AddCardButton-sc-6j7h0r-4 lyglS"
+              data-testid="add-card"
               onClick={[Function]}
             >
               <svg
@@ -368,6 +374,7 @@ exports[`should render homepage matching snapshot 1`] = `
           </div>
           <div
             className="columncomponent__CardsContainer-sc-6j7h0r-1 jepiqK"
+            data-testid="column-done"
           />
         </div>
         <div
