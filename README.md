@@ -6,7 +6,7 @@ It allow the user to create projects boards, and customize them to show what it 
 
 ## Demo
 
-A demo of the project visit can be found [here](https://zero-kanban-mr8l13v84-nickrosendo.vercel.app)
+A demo of the project visit can be found [here](https://zero-kanban.vercel.app)
 
 ## Summary
 [Design concepts](#design-contacts)
