@@ -36,7 +36,7 @@ The project uses `Next.js` react framework with `typescript`;
 
 `styled-components` for the styling of components and the UI;
 
-`redux` as the main state management library;
+`react-beautiful-dnd` for the drag-and-drop mechanism;
 
 `jest` for unit and snapshot testing;
 
