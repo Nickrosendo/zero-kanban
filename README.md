@@ -4,10 +4,12 @@ This project is a Kanban management tool.
 
 It allow the user to create projects boards, and customize them to show what it needs to be done in a project. 
 
+## Demo
+
+A demo of the project visit can be found [here](https://zero-kanban-mr8l13v84-nickrosendo.vercel.app)
+
 ## Summary
 [Design concepts](#design-contacts)
-
-[Routes](#routes)
 
 [Tech stack](#tech-stack)
 
@@ -15,50 +17,18 @@ It allow the user to create projects boards, and customize them to show what it 
 
 [Running tests](#running-tests)
 
+[Possible improvements](#improvements)
+
 ## Design concepts
 
 ### components
-The components are styled using styled-components and sits on the `/src/components` folder, all the components have a dark and light theme version.
-
-### state management
-The state management on this project uses both `redux` and `React Context API`, while the `redux` is used for more "transaction" data of the application, such as the board state, cards, etc. The `React Context API` is used for customizations like the theme, font-size and that kind of user customizations.
-
-### authentication
-The authentication occurs in the server, using the [Next.js api routes](https://nextjs.org/docs/api-routes/introduction), and store the user data only in the server memory, so at every restart the data is reseted.
-The user can also use the application as a guest user to skip authentication.
+The components are styled using styled-components and sits on the `/src/components` folder, all the components are implemented using `styled-components`
 
 ### board
-The board management occurs mostly on two places, in the `redux` store and also in the `server` memory, and each board update this data gets synced on all clients.
+The board management occurs mostly on the `Board` component, there is the place where the all the board state is managed, and through passing props to `Column` and `Card` components we make sure all business logic is centralized is that `Board` component.
 
-### customization
-The application allow the user to customize their experience, mostly their theme(dark or light) and the font-size of the application. The customization data gets stored in the server memory and synced to all clients.
-
-## Routes
-
-### /board
-
-This route is intended to list the user boards, create a new one or remove the boards in the list.
-
-### /board/[id]
-
-This route contains most of the board functionality, the `id` is a dynamic route flag to identify the current board.
-
-On this route the user can create new columns, delete existent ones and reorganize their order.
-
-On the available columns the user can create new cards, delete existent cards and reorganize their order or move them to other columns.
-
-On the available cards the user can edit them by clicking the edit button or double-click them.
-
-### /login 
-
-The Login route allow the user to login as a `guest` or a `know-user` via username and password combo.
-
-***The authentication data is stored only on the memory of the server, so at every restart or new deploy all `know-users` gets reseted.***
-
-### /signup
-
-The Signup route allow users to register in the platform.
-
+### drag-and-drop
+The drag-and-drop functionality is mostly handled by the library `react-beautiful-dnd`, is a pretty straight-forward library and it required three parts to work, the first part is the `DragDropContext` wrapping the drag-and-drop area and accepting a prop called `dragEnd` the will notify us with the source and destination positions of the drag-and-drop movement, the second part is the `Droppable` that wrap each `Column` component and marks the place where each `Card` could be dropped, and for the last part we use the `Draggable` component that wrap each `Card` component, this is what makes all cards allowed to be drag.
 
 ## Tech stack
 
@@ -125,3 +95,12 @@ npm run test:all
 # or
 yarn test:all
 ```
+
+## improvements
+Some of the improvements that can be made in the future:
+- Managing board state using `redux` or other state-management-library.
+- Using an api connected to a database to store the board state.
+- Including authentication to access the board state.
+- Allow better customization using the `styled-components` theming feature.
+- Allow the user to create more boards.
+- Allow the user to change the default columns.
